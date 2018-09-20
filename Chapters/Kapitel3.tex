@@ -1,61 +1,59 @@
 \chapter{IST-Analyse}
-In dieser Arbeit wird man das Bestellsystem von der Party-Service-Website "Jungekueche". Dazu sind auch das Verwaltungssystem des Auftraggeber und die Verwaltungsseite des Kunden. Zuerst wird es User Interface von allen drei beschreiben, danach werden wir die Funktionalität dieses System betrachten.
+In dieser Arbeit wird das Bestellsystem von der Party-Service-Website "Jungekueche" betrachtet. Dazu zählen auch das Verwaltungssystem des Auftraggebers und die Verwaltungsseite des Kunden. Zuerst wird das Userinterface aus der Sicht von allen drei Akteuren beschrieben. Danach wird die Funktion des Systems evaluiert.
 
 \section{Beschreibung des User Interface (UI) des Bestellsystems} 
 
-Die Anmeldung und die Registrierung Formular befindet sich auf einer gemeinsamen Seite. 
-Die Anmeldung Formular hat zwei Felder, in denen den Benutzer seine PIN und E-Mail eingeben muss. Neben den Felder steht ein Hinweis, durch das den Kunde die nötige Information hat, wie sich anmelden oder sich registrieren kann.  
+Die Anmeldung und die Registrierung für neue Nutzer befindet sich auf einer gemeinsamen Seite. 
+Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine E-Mail eingeben muss. Neben den Feldern steht ein Hinweis, welcher den Kunden mit den nötigen Informationen versorgt, wie er sich anmelden oder registrieren kann.  
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/anmeldeformular.png}
-	\caption[Anmeldeformular]{Die bisherige Eingabemaske für den Kundenlogin}
+	\caption[Anmeldeformular]{Die bisherige Eingabemaske für das Kundenlogin}
 	\label{fig:anmeldeformular}
 \end{figure}
 
-
-Falls den Kunde kein PIN hat, muss er sich registrieren. Dies Formular besteht auf fünf Sektionen. Im ersten muss der Kunde seine persönlichen Daten geben. In der zweiten stehen die Angeben zum Auftrag. Menü Auswahl it die nächste Sektion. Im vorletzten stehen die Zubehörauswahl und Serviceauswahl. Das letzte Sektion ist die Erklärungen zu dem Registrierungsprozess. 
+Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteht aus fünf Abschnitten. Im ersten muss der Kunde seine persönlichen Daten angeben. In dem zweiten steht die Informationen des Auftrags. Menü Auswahl ist der nächste Abschnitt. Im vorletzten wird die Zubehörauswahl und Serviceauswahl angezeigt. Der letzte Abschnitt ist die Erklärung zu dem Registrierungsprozess. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/registerForm.png}
-	\caption[Registerformular]{Die bisherige Eingabemaske für den Registerformular}
+	\caption[Registerformular]{Die bisherige Eingabemaske für das Registrierungsformular}
 	\label{fig:registerForm}
 \end{figure}
 
-Bei einer Registrierungsanftage kann der Auftraggeber sie bestätigen oder löschen. Für besseres Verständnis, was der Auftraggeber machen kann, werden wir uns mit der Verwaltungsseite des Auftraggeber. Sie besteht auf drei Optionen: Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst werden wir die Auftragsverwaltung betrachten. Da befindet sich elf Optionen, neun davon zum eigene Unteroptionen weiteleiten. Andere zwei sind "Save" und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kunde einsehen, editieren, kommunizieren und löschen, dazu die Nachrichten einlesen oder löschen. Er kann nicht nur das machen, sonder auch die neuen/bearbeitenden/alten Aufträge einsehen, editieren oder löschen.
+Im Fall einer Registrierungsanfrage kann der Auftraggeber sie bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung; Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst betrachtet man die Auftragsverwaltung. Dort befinden sich 11 Optionen, 9 davon leiten zu eigenen Unteroptionen weiter. Die anderen Zwei sind Speichern und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kundedaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen die Nachrichten lesen und löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/Auftragverwaltung.png}
-	\caption[Auftragsverwaltung]{Die bisherige Eingabemaske für den Auftragsverwaltung}
+	\caption[Auftragsverwaltung]{Die bisherige Eingabemaske für die Auftragsverwaltung}
 	\label{fig:Auftragverwaltung}
 \end{figure}
 
-Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde ein PIN pe E-Mail. Mit diesem PIN und seinem E-Mail kann der Kunde sich im "Jungekueche" anmelden. Danach er wird in seiner persönlichen Seite eingelogt. Dort hat er eine Übersicht auf seine aktuelle und alte Bestellungen, ein Kontaktfenster, in dem er die Nachrichten einsehen oder neue schreiben kann, Wichtige Information und Information zu Beachten. Es gibt eine Option, durch die den Kunde neue Bestellungen machen kann.  
+Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN pe E-Mail. Mit diesem PIN und seiner E-Mail kann der Kunde sich bei "Jungekueche" anmelden. Nach dem Login-Prozess, findet er sich auf einer persönlichen Nutzerseite wieder. Dort hat er eine Übersicht über seine aktuellen und alten Bestellungen, ein Kontaktfenster, in dem er die Nachrichten einsehen oder schreiben kann, sowie eine Art Newsletter. Außerdem gibt es eine Option, durch die der Kunde neue Bestellungen aufgeben kann.  
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/KundenAnsicht.png}
-	\caption[Kundeansicht]{Die bisherige Eingabemaske für den Auftragsverwaltung}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für die Auftragsverwaltung}
 	\label{fig:KundenAnsicht}
 \end{figure}
 
 \section{Beschreibung der Funktionalität}   
 
-Man hat schon erfahren, dass die Anmeldung ist von dem Registrierung abhängig. Jetzt wird es erläutert. Das Programm wie schon besagt wurde, ist auf ASP und ASP.NET basiert. Die verwendenden Hilfsprogrammen sind JQuery, JavaScript, AJAX, HTML und CSS. 
+Einer Anmeldung muss immer eine Registrierung vorausgehen. Diese Funktionalität wird mit ASP und ASP.NET realisiert. Die verwendeten Hilfsprogramme sind JQuery, JavaScript, AJAX, HTML und CSS. 
 
-Zuerst wird es betrachtet, wie funktioniert die Kommunikation zwischen den Datei. Das ganze Programm besteht aus Fron- und Backend. Frontend ist diese Teil, die der Benutzter verwendet. Im Backend werden die Daten verarbeitet. Die Verbindung zwischen die beiden ist wegen JavaScript und JQuery  Methoden. Wenn der Benutzer eine Tätigkeit tätigen, werden die eingegebenen Eingaben über JavaScript Methoden zu dem Backend weitergeleitet. Dort werden sie verarbeitet und werden über JavaScript Methode aufgerufen, und werden wieder zu dem Frontend zugeschickt. Das Backend entsteht aus ASP-Datei, in denen sich verschiedenen Methoden befindet, und Datenbanken. In der Datenbanken werden die eingegebenen Eingaben gespeichert.    
-
-
-
+Zuerst wird betrachtet, wie die Kommunikation zwischen den verschiedenen Technologien funktioniert. Das ganze Programm besteht aus Front- und Backend. Das Frontend bezeichnet den Teil des Programms, welches der Nutzer verwendet. Im Backend werden die Daten verarbeitet. Die Verbindung zwischen den beiden wird über JavaScript und JQuery realisiert. Wenn der Benutzer eine Tätigkeit ausführt, werden die eingegebenen Daten über JavaScript Methoden zu dem Backend weitergeleitet. Dort werden sie verarbeitet und über JavaScript Methode aufgerufen. Dort werden sie bearbeitet und wieder zu dem Frontend zugeschickt. Das Backend entsteht aus ASP-Funktionen, in denen sich verschiedenen Methoden befinden, sowie Datenbanken. In den Datenbanken werden die eingegebenen Daten gespeichert.
 
 Abbildung (neue Diagramm.. die Kommunikation zwischen Front- und Backend bzw. Client -Server)
 
-Jetzt, wenn man verstanden hat, wie funktioniert die Kommunikation zwischen Front- und Backend, soll man verstehen, wie die verschiedene Befehle vom Frontend zu dem Backend passieren. 
+Nach der grundlegenden Kommunikation zwischen Front- und Backend, wird erläutert wie die einzelnen Kommunikationsabläufe zwischen Front- und Backend koordiniert werden.
 
 \subsection{Anmelde- und Registerformular} 
+
+\textbf{Hier wurde noch nichrt korrigiert}
 
 Es wird mit dem Bestellseite angefangen, bzw. Anmeldeformular. Wenn die Kunde "Anmeldung" drückt, wird eine HTML Post-Methode aktiviert.  So werden JavaScript- und ASP- Methoden aufgerufen. Die JavaScript-Methoden werden benutzt, damit die Eingabe geprüft wird, ob sie korrekt ist, und ASP-Methoden werden dann aufgerufen. 
 
