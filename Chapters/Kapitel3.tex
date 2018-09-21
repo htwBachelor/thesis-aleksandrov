@@ -9,7 +9,7 @@ Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/anmeldeformular.png}
+	\includegraphics[width=0.7\linewidth]{Graphics/anmeldeformular.png}
 	\caption[Anmeldeformular]{Die bisherige Eingabemaske für das Kundenlogin}
 	\label{fig:anmeldeformular}
 \end{figure}
@@ -18,7 +18,7 @@ Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteh
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/registerForm.png}
+	\includegraphics[width=0.7\linewidth]{Graphics/registerForm.png}
 	\caption[Registerformular]{Die bisherige Eingabemaske für das Registrierungsformular}
 	\label{fig:registerForm}
 \end{figure}
@@ -27,7 +27,7 @@ Im Fall einer Registrierungsanfrage kann der Auftraggeber sie bestätigen oder l
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/Auftragverwaltung.png}
+	\includegraphics[width=0.7\linewidth]{Graphics/Auftragverwaltung.png}
 	\caption[Auftragsverwaltung]{Die bisherige Eingabemaske für die Auftragsverwaltung}
 	\label{fig:Auftragverwaltung}
 \end{figure}
@@ -36,7 +36,7 @@ Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN pe E-Ma
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/KundenAnsicht.png}
+	\includegraphics[width=0.7\linewidth]{Graphics/KundenAnsicht.png}
 	\caption[Kundeansicht]{Die bisherige Eingabemaske für die Auftragsverwaltung}
 	\label{fig:KundenAnsicht}
 \end{figure}
@@ -63,7 +63,7 @@ mehr im Anhang - Funktionen
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.9\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/Bestellung.JPG}
+	\includegraphics[width=0.9\linewidth]{Graphics/Bestellung.JPG}
 	\caption[Anmeldung/Bestellung]{Die bisherige Eingabemaske für den Vorgang der Bestellung/Registrierung}
 	\label{fig:Bestellung}
 \end{figure}
@@ -76,7 +76,7 @@ Hier wird man sich nur mit dem Auftragsverwaltung beschäftigen. Die Auftragsver
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/NeueNachricht.JPG}
+	\includegraphics[width=0.8\linewidth]{Graphics/NeueNachricht.JPG}
 	\caption[Kommunikation]{Die bisherige Eingabemaske für den Nachrichten lesen oder löschen}
 	\label{fig:Kommunikation}
 \end{figure}
@@ -90,14 +90,14 @@ Die Funktionalität von allen drei ist dieselbe. Deswegen es wird allgemein erkl
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/Autrag_Loeschen.JPG}
+	\includegraphics[width=1\linewidth]{Graphics/Autrag_Loeschen.JPG}
 	\caption[AutragLoeschen]{Die bisherige Eingabemaske für den Nachrichten lesen oder löschen}
 	\label{fig:Autrag_Loeschen}
 \end{figure}
  
 \begin{figure}[h] 
 	\centering
-	\includegraphics[width=1\linewidth]{/Users/matheo.zech/Documents/Thesis-Bozhidar/Graphics/auftragVerwaltung.JPG}
+	\includegraphics[width=1\linewidth]{Graphics/auftragVerwaltung.JPG}
 	\caption[auftragEinsehen]{Die bisherige Eingabemaske für den Nachrichten lesen oder löschen}
 	\label{fig:auftragEinsehen}
 \end{figure}
@@ -105,43 +105,93 @@ Die Funktionalität von allen drei ist dieselbe. Deswegen es wird allgemein erkl
 \pagebreak
 \subsubsection{Kundendatei}
 
-Hier befindet sich die Information über die Kunden. Da kann man die Information editieren oder löschen. Um der bestimmten Kunde schneller zu finden, steht eine Suchmaschine zur Verfügung. Eine bessere Übersicht stellt uns die Abbildung dar. 
+Hier befindet sich die Information über die Kunden. Da kann man die Information editieren oder löschen. Um der bestimmten Kunde schneller zu finden, steht eine Suchmaschine zur Verfügung. Eine bessere Übersicht wird in der Abbildung dargestellt. 
 
-Abbildung Adressbuch
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graphics/kundenDatei.png}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für die Kundendatei}
+	\label{fig:KundenDatei}
+\end{figure}
 
 Wenn man editieren oder löschen will, wird es über JavaScript Funktion passiert. Diese Funktion ruft die Methoden auf, die sich in der zugeordneten ASP-Datei befindet. Im "Editor-Fenster" kann man die Daten des Kunden editieren, Login-Daten wie Email an Kunden übermitteln, Wichtige Information für alle Kunden senden, V.I.P-Status des Kunden geben, spezifische Warnungen jeweiligem Kunde aufgeben, Information schreiben, sowie Unterschrift editieren und etc. Besser Verständnis zum diesen Fenster ergibt uns Abbildung 3-19
 
-Abbildung übersicht von Editor-Fenster
+\pagebreak
 
-Durch JavaScript - Methode wird eine zusätzlichen Möglichkeit zu dem Kunde Nachricht geschrieben zu werden. Sie wird aktiviert, wenn der Cursor auf dem bestimmten Kunde, der in der Liste des Adressbuch ist, steht. Die Kommunikation zwischen dem Auftraggeber und dem  Kunde wird auch im Datenbank "komentar" gespeichert. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graphics/kundeEditieren.png}
+	\includegraphics[width=0.7\linewidth]{Graphics/kundeEditieren1.png}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Kunden-Editor}
+	\label{fig:Kunden Editor}
+\end{figure}
 
-Abbildung Neue Nachricht
+
+Durch JavaScript - Methode wird eine zusätzlichen Möglichkeit zu dem Kunde Nachricht geschrieben. Sie wird aktiviert, wenn der Cursor auf dem bestimmten Kunde, der in der Liste des Adressbuch ist, steht. Die Kommunikation zwischen dem Auftraggeber und dem  Kunde wird auch im Datenbank "komentar" gespeichert. 
 
 Nach allem, was geschrieben ist, soll man sich ein vertieftes Verständnis aufbauen. In folgender Abbildung kann man wie genau die Aktivitäten des Auftraggeber passieren und wie funktioniert die Nachricht-Kommunikation.
+\pagebreak
 
-Abbildung Kundendatei
 
-Abbildung Auftraggeber-Kunde  
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.5\linewidth]{Graphics/Kundendatei.JPG}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Editieren/Löschen Funktion}
+	\label{fig:Kunden Datei Editieren und Löschen}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.6\linewidth]{Graphics/Kommunikation.JPG}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Kunden-Editor}
+	\label{fig:Kommunikation Auftraggeber Kunde}
+\end{figure}
 
 \subsubsection{Online-Editor}
 
 Durch diese Option kann man die neuen Artikel zu erstellt, editieren und löschen werden können.  Es gibt „Artikel – Arragements“ und „Artikel – Standard“. Wenn schon ein Artikel erstellt wurde, kann er entweder gelöscht, editiert oder zugeordnet werden. 
-JavaScript Funktionen werden benutzt, um die Eingabe zu prüfen, ob alles korrekt ist. Wenn alles in Ordnung ist, werden die obengenannten Methoden aus den jeweiligen Dateien aufgerufen. In der folgenden Abbildung ist die Übersicht der Sete zu sehen.
+JavaScript Funktionen werden benutzt, um die Eingabe zu prüfen, ob alles korrekt ist. Wenn alles in Ordnung ist, werden die obengenannten Methoden aus den jeweiligen Dateien aufgerufen. In der folgenden Abbildung ist die Übersicht der Seite zu sehen.
+\pagebreak
 
-Abbildung Online Übersicht
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graphics/menue-uebesicht.png}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Kunden-Editor}
+	\label{fig: Online-Editor übersicht}
+\end{figure}
 
 Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wird, wird neue Seite geöffnet, in der es vielfältige Möglichkeiten gibt, die Inhalt geändert werden kann. Abbildung   zeigt uns wie diese Seite aussieht.
 
-Abbildung
+\pagebreak
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graphics/arrangement-Menue-editor.pdf}
+		\caption[Kun2deansicht]{Die bisherige Eingabemaske für das Menü-Editor}
+	\label{fig: Editor-Menü2}
+\end{figure}
+
 
 Artikel-Standard“ hat nur eine Möglichkeit, editiert zu werden. Sie wird in der Abbildung   dargestellt.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graphics/menuStandart.png}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Menü-Editor-Standard}
+	\label{fig: Editor-Menü-Standard}
+\end{figure}
 
-In der folgenden Abbildung ist der Zusammenhang zwischen die verschiedenen Funktionen des „Online-Editor“ zu sehen.
+
 
 Abbildung Online-Editor
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/OnlineEdior.jpg}
+	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Menü-Editor-Standard}
+	\label{fig: Editor-Menü-Funktionalität}
+\end{figure}
+In Abbildung \ref{fig: Editor-Menü-Funktionalität} ist der Zusammenhang zwischen die verschiedenen Funktionen des „Online-Editor“ zu sehen.
 
-
+\pagebreak
 
 \section{Testen} 
 
@@ -160,3 +210,11 @@ Für diese Arbeit wird ein webbasierten Sicherheit-Checker von 1\&1. Nach eine v
 
 \end{itemize}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/egebnis1to1.png}
+	\caption[Egebniss Von 1zu1]{Die bisherige Eingabemaske für das Menü-Editor-Standard}
+	\label{fig: Egebniss Von 1zu1}
+\end{figure}
+
+Wie man von der Abbildung 3.17 sehen kann, ist die Webseite gesichert, aber es gibt einige Bereiche, die eine Optimierung benötigen würde. Sie lädt sich langsam, wird im Browser relativ oft gefunden und wird   
