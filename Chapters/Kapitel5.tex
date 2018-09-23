@@ -58,12 +58,33 @@ Ein \ac{PIN} lässt sich in E-Mail des Kunde zusenden. So wird sichergestellt, d
 Der Auftragsgeber entscheidet, ob der sich registrierten Kunde bestellen darf    oder nicht. Danach kann der Benutzer sich mit dem PIN und die E-Mail anmelden. 
 Die Kundenverfassung wird durch Member \ac{API} von Umbraco realisiert. 
 Wie schon erläutert wurde, ist Umbraco auf ASP.NET basiert. Damit kann man vom CMS unterschiedliche „Services“ benutzen. Ein davon ist „MemberService“. Das ist direkte Kanal zu dem MemberAPI. Es ist in den „Services property“ von dem „SurfaceController“ zu Verfügung gestellt. 
-Die Registrierung wird via ASP.Net Code und Media API programmatisch erstellt. Das ist eine komplexe Methode, in der es eine vielfältige Datei benötigt wird (SurfaceController, Model, PartialView und Source Datei, wo Front-End Source code steht). Die benötige Information, die wir zu der Registrierung brau-chen, wird im „Model“- Datei geschrieben. 
+Die Registrierung wird via ASP.Net Code und Media API programmatisch erstellt. Das ist eine komplexe Methode, in der es eine vielfältige Datei benötigt wird (SurfaceController, Model, PartialView und Source Datei, wo Front-End Sourcecode steht). Die benötige Information, die wir zu der Registrierung brauchen, wird im „Model“- Datei geschrieben. 
 In der Datei „Model“ stehen „Model Properties“. Das sind Parametern, mit denen man arbeitet. Einfach erklärt, über das Model werden die Properties von „Partial-View“ zu dem „SurfaceController“ übertragen.
 „SurfaceController“ ist der „Autobahn“ zu der Umbraco-Datei. Das ist ein MVC (Model View Controller), das mit dem Umbraco interagiert wird. Es wird von der Bibliothek Umbraco.Web.Mvc.SurfaceController geerbt. 
 Über „PartialView“ werden die Verbindungen zwischen Kontakt Formular und „Model Properties“ geschehen. Das ist eigentlich eine Teilansicht, die von Umbraco Front-End benutzt wird. Dort ist Umbraco User Interface (UI). 
-Folgende Abbildung ergibt bessere Verständnis wie die obengenannten Begriffe zu einander stehen.
+Folgende Abbildung \ref{fig: neues Konzept: Registrierung} ergibt bessere Verständnis wie die obengenannten Begriffe zu einander stehen.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\paperwidth,angle=90]{Graphics/Registrierung.JPG}
+	\caption[neues Konzept: Registrierung]{Neues Konzept zum Registrieren}
+	\label{fig: neues Konzept: Registrierung}
+\end{figure}
 
+Diese Möglichkeit vom Umbraco erlaubt uns sich sehr leicht und bequem in dem Server anzumelden.
+In Anhang 6 kann man sich übersichtlicher genau anschauen, was im Back-End passiert ist.
 
+\subsection{Kundeansicht}
+Für Erleichterung des Kunde stehen auf einer Seite alle Möglichkeiten, die der Kunde hat: 
+
+\begin{itemize}	
+	\item Neue Bestellungen abgeben, aktuelle und vorherige Bestellungen ansehen
+	\item Neue Nachricht schreiben und alte Nachrichten ansehen.
+	\item Wichtige Information zu beachten
+	\item Individuelle Information vom Auftraggeber.
+\end{itemize}
+Nach der Registrierung wird der Kunde eine neue Seite sehen. Dort kann er die obengenannten Optionen verwalten. 
+Wenn der Kunde neue Bestellung tätigen will, wird ein neues Fenster geöffnet, in dem er erwünschten Artikeln wählen und bestellen kann. Die gewählten Produkte werden in den Datenbanken gespeichert. Von dort werden sie als vergangene Bestellungen verwendet. Das selben Prinzip steht auch für die Kommunikation zwischen den Auftragsgeber und den Kunden. Wenn eine Nachricht ge-schrieben wird, wird sie in den anderen Datenbanken gespeichert. 
+Vom Umbraco wird die Information direkt zu den Kunden gesendet. 
+Der Auftragsgeber, so wie der Kunde, können von der Datenbank die Bestellungen und die Nachfragen ansehen.
 
