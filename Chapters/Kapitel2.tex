@@ -3,41 +3,38 @@
 In diesem Kapitel beschäftigt man sich mit den verwendeten Technologien und Webservices. Diese sind in der Webentwicklung sehr entscheidend, da davon die Userexperience und Wartbarkeit abhängt. Besonderer Augenmerk wurde dabei auf die möglichst weite Verbreitung der verwendeten Technologien gelegt. Dies ist ein Vorteil, da daraus resultiert das es eine große Community gibt, die die Projekte aktuell hält.
 
 \section{HTML}
-Die Grundlegende Sprache für das erstellen und Rendern von Internetseiten ist \ac{HTML}. Es ist im Grunde DIE Schlüsseltechnologie um Internetseiten aus dem \ac{WWW} anzuzeigen. Natürlich kann man \ac{HTML} auch für das erstellen und webbasierten lokalen \ac{GUI} genutzt werden. Weitere Informationen findet man unter  \cite{mozilla-html}.
+Die Grundlegende Sprache für das erstellen und Rendern von Internetseiten ist \ac{HTML}. Es ist im Grunde DIE Schlüsseltechnologie um Internetseiten aus dem \ac{WWW} anzuzeigen. Natürlich kann man \ac{HTML} auch für das erstellen und webbasierten lokalen \ac{GUI} genutzt werden. Weitere Informationen findet man unter  \cite{Duckett2011}.
 
 
 \section{CSS}
 
-\ac{CSS} ist eine moderne Technologie zur Gestaltung von Internetseiten. Dies dient der Gestaltung von HTML-Texten und liefert auch teilweise dynamische Funktionalität. Weitere Informationen findet man unter  \cite{mozilla-css}.
+\ac{CSS} ist eine moderne Technologie zur Gestaltung von Internetseiten. Dies dient der Gestaltung von HTML-Texten und liefert auch teilweise dynamische Funktionalität. Weitere Informationen findet man unter  \cite{Wyke-Smith2013}.
 
 \section{JavaScript}
 
-JavaScript ist eine objektorientierte  Interpretersprache, die Webseiten erst dynamisch macht. Sie wird in diesem Kontext im Webbrowser des Anwenders ausgeführt und stellt die Client-Seite einer Applikation dar.  Link
+JavaScript ist eine objektorientierte  Interpretersprache, die Webseiten erst dynamisch macht. Sie wird in diesem Kontext im Webbrowser des Anwenders ausgeführt und stellt die Client-Seite einer Applikation dar. \cite{Flanagan2011}
 
 \section{JQuery}
 
-JQuery ist ein weit vebreitetes JavaScript-Framework. Es stellt  Funktionen zur Verfügung welche ein leichtes manipulieren des Seiteninhalts ermöglicht. So kann die Entwicklung von komplexen Webprojekten bedeutend beschleunigt werden. 
+JQuery ist ein weit vebreitetes JavaScript-Framework. Es stellt  Funktionen zur Verfügung welche ein leichtes manipulieren des Seiteninhalts ermöglicht. So kann die Entwicklung von komplexen Webprojekten bedeutend beschleunigt werden.\cite{Delamater2017} 
 
-\section{Ajax}
-
-Ajax ermöglicht es Daten asynchron zwischen Browser (Client) und Server zu übertragen. Dies ermöglicht partielle Veränderungen der Internetseite, ohne das ein kompletter Refresh des Seiteninhalts vorgenommen werden muss.
 
 \section{AngularJS}
 
-Hierbei handelt es sich um ein JavaScript Framework, welches hochdynamische WebAnwendungen oder lokale Anwendungen mit Webtechnologie ermöglicht. 
+Hierbei handelt es sich um ein JavaScript clientseitiges Framework, welches hochdynamische WebAnwendungen oder lokale Anwendungen mit Webtechnologie ermöglicht. Mithilfe von Angular ist Möglich neue Architekturkonzepte auf den Client zu bringen und komplexe Anwendungen zu entwickeln. \cite {Gechev2017}
 
 \section{Umbraco}
 
 
 Umbraco ist ein \ac{CMS}. Es dient zum Erstellen, Bearbeiten und zur Verwaltung dynamischer Webseiten. Umbraco basiert auf C\#  und auf der ASP.Net-Technologie. Heutzutage werden Microsoft SQL Server, My SQL, VistaDB, Peta Poco und weitere Datenbanken verwendet. Dieses CMS ist Open Source und die erste Version ist vom dänischen Software-Entwickler Niels Hartving im Jahr 2000 veröffentlicht worden. 
 
-Aus folgenden Gründen hat man sich bei der Umsetzung für Umbraco entschieden \cite[S. 12]{bentley:1999}:
+Aus folgenden Gründen hat man sich bei der Umsetzung für Umbraco entschieden \cite {UmracoHQ2018}:
 
 \begin{itemize}	
 	\item Umbraco ist ein flexibles CMS. Es gibt keine unnötigen Optionen und Schaltflächen. Alles ist einfach zu benutzen und zu verstehen.
 	\item Der intuitive Editor ermöglicht es jede Art von Content einfach einzupflegen. Seiten sind einfach zu bearbeiten oder zu aktualisieren und wird  nach dem selben eingängigen Paradigma dargestellt. Es ist ohne Bedeutung mit welchem Gerät auf die Webseite zugegriffen wird - Umbraco ist immer responsiv. 
 	\item Es gibt keine Einschränkung welche Webentwicklungsprogrammiersprache man nutzen muss. Umbraco ist sehr anpassungsfähig. 
-	\item Sehr gut angepasst für agile Prozesse: „Im Vergleich zu anderen Systemen geht der Livegang Deines Projekts damit sehr schnell. Umbraco unterstützt die agilen Prozesse der modernen Digitalbranche, bei denen es essenziell ist, dass Editoren immer und überall Content publizieren können, ohne damit "Content Freeze" zu verursachen. Gleichzeitig sollen auch Entwickler Bugfixes und Features schnell einbauen können. Umbraco sorgt dafür, dass der Flow nie endet“. 
+	\item Sehr gut angepasst für agile Prozesse: „Im Vergleich zu anderen Systemen geht der Livegang Deines Projekts damit sehr schnell. Umbraco unterstützt die agilen Prozesse der modernen Digitalbranche, bei denen es essenziell ist, dass Editoren immer und überall Content publizieren können, ohne damit "Content Freeze" zu verursachen. Gleichzeitig sollen auch Entwickler Bugfixes und Features schnell einbauen können. Umbraco sorgt dafür, dass der Flow nie endet“. [wieder da] \cite{UmracoHQ2018}
 	\item Umbraco CMS ist integrierbar. Man kann E-Comerce-Platform, CRM (Custom Relationship Management) System oder 3rd-Party Personalisation Engine verwenden. Ohne Probleme können individuelle Systeme integriert werden. Wegen Application-Programm-Interface (API) werden alle Daten mit sichtbarem Content mit dem Umbraco Front- und Backend vernetzt.
 	\item Die Community vom Umbraco ist groß. Freundliche und aktive Umbraco Nutzer helfen jeder Zeit  gegenseitig bei der Verbesserung des Codes. Viele aktive Tester sorgen dafür, dass Umbraco ständig verbessert wird.
 	\item Das Modell der Lastverteilung ist in ASP.NET integriert. Jede ASP.NET-Webseite besitzt eigene Session-Verwaltung, die so konfiguriert werden kann, dass sie die Daten auf den SQL Server verlegen kann. So lassen sich Daten in einem gemeinsamen Datenspeicher ablegen. So ist es möglich, dass jeder Server auf den Datenstand eines Nutzers zugreifen kann.
@@ -47,7 +44,7 @@ Aus folgenden Gründen hat man sich bei der Umsetzung für Umbraco entschieden \
 
 \section{1\&1 Website Check}
 
-Diese Anwendung überprüft, wie gut die betrachtete Webseite ist und was noch optimiert werden kann. Vier Aspekten werden geprüft (6):
+Diese Anwendung überprüft, wie gut die betrachtete Webseite ist und was noch optimiert werden kann. Vier Aspekten werden geprüft \cite{1and12018}:
 \begin{itemize}
 	\item Darstellung der Webseite
 	\item Auffindbarkeit in Suchmaschinen
@@ -60,4 +57,4 @@ Wenn die Internetadresse eingegeben wurde, wird Webseite aufgerufen. Danach wird
 
 \section{HTTP Obeservatory}
 
-Mozilla HTTP Observatory ist ein Set von Tools, die zur Analyse und als Informationsquelle für Verbesserungen der Website dienen. 
+Mozilla HTTP Observatory ist ein Set von Tools, die zur Analyse und als Informationsquelle für Verbesserungen der Website dienen.\cite{King2018} 

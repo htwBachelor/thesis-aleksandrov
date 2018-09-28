@@ -86,11 +86,4 @@
   url          = {https://our.umbraco.com/documentation/getting-started/data/members/},
 }
 
-@Book{Wahlberg2011,
-  title     = {{Umbraco User's Guide}},
-  publisher = {Wiley Publishing},
-  year      = {2011},
-  author    = {Nik Wahlberg and Paul Sterling},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -1,10 +1,12 @@
 \chapter{Konzeption und Implementierung}
 
-Das neue Konzept, das wird im diesen Kapitel erklärt, wird auf zwei großen Paketen unterteilt – Paket A und Paket B. 
-Im ersten Paket wird dem Auftragsgeber User Interface (UI) aufgebaut. Das Ziel ist maximale Flexibilität des Website-Besitzers zu haben und durch einfache Tätigkeiten, bestimmten Zweck zu erreichen. Man kann editieren, ändern und Text stilisieren. Umbraco verfügt mit sogenannte „Grid“. Es dient dafür, dass man das Design der Seite manipulieren und auch die schon besprochenen Möglichkeiten ausnutzen kann. 
-Es werden auch eigene Macros benutzt, in den ein Quell-Code der SHOP – Komponenten hingeschrieben wird. Somit kann der Auftragsgeber Macros in beliebigen Teilen der Seiten hinstellen. Umbraco – Forms werden benutzt als Formulare, damit man selber einordnen kann.
+Das neue Konzept, das im diesen Kapitel erklärt wird, geht es um die Migration von Datenbanken von alte webbasierte Software zur neuen Software, die auf Umbraco CMS basiert ist. Die Funktionalitäten müssen gleich bleiben.  
+Das Projekt unterteilt sich auf zwei großen Paketen – Paket A und Paket B. 
+Im ersten Paket wird dem Auftraggeber User Interface (UI) aufgebaut. Das Ziel ist maximale Flexibilität des Website-Besitzers zu haben und durch einfache Tätigkeiten, bestimmten Zweck zu erreichen. Man soll in diesem Bereich die Inhalt der Webseite editieren, ändern und stilisieren. Umbraco verfügt mit sogenannte „Grids“. Es dient dafür, dass man das Design der Seite manipulieren und auch die schon besprochenen Möglichkeiten ausnutzen kann. 
+Es werden auch eigene Macros benutzt, in den ein Quellcode der SHOP – Komponenten hingeschrieben wird. Somit kann der Auftraggeber Macros in beliebigen Teilen der Seiten hinstellen. Umbraco – Forms werden benutzt als Formulare, damit man selber die Felder einordnen kann.
 Beide Paketen werden als Startknoten aus einer Umbraco-Instanz heraus verwaltet. 
-Paket B ist als Kern der Seite dargestellt. Das ist eigentlich das Online-Bestellsystem. Hier ist es wichtig, dass eine unkomplizierte, bedienbare, reibungslose und flexibel Umgebung aufgebaut wird. Das System besteht aus drei Hauptkerne: 
+Paket B ist als Kern der Seite dargestellt. Das ist eigentlich das Online-Bestellsystem. Hier ist es wichtig, dass eine unkomplizierte, bedienbare, reibungslose und flexibel Umgebung aufgebaut wird. Das System besteht aus drei Hauptkerne:
+ 
 \begin{itemize}	
 	\item Bestellsystem
 	\subitem Kundenverwaltung (Anmeldung, Kundenbereich, Kommunikation)
@@ -17,24 +19,25 @@ Paket B ist als Kern der Seite dargestellt. Das ist eigentlich das Online-Bestel
 \end{itemize}
 
 \section{Aufbau vom Umbraco}
-Wie oben schon erklärt wurde, ist Umbraco ein Content Management System, das flexibel und Benutzerfreundlich ist. Damit man bessere Verständnis hat, worum es geht, wird es im nachträglichen Unterkapitel erläutern. 
 
-User Interface von Umbraco ist auf drei Teilen verteilt. Erste Teil ist Hauptfunktion bzw. Setcion bezeichnet. Da befinden sich die Hauptoptionen: Content, Media. Settings, Developer, Users, Members, Forms.
+Wie oben schon erklärt wurde, ist Umbraco \cite{Wahlberg2011} ein Content Management System, das flexibel und Benutzerfreundlich ist. Damit man bessere Verständnis hat, worum es geht, wird es in diesem Unterkapitel erläutern. 
+
+User Interface von Umbraco ist auf drei Teilen verteilt. Erste Teil ist Hauptfunktion bzw. Setcion. Dort befinden sich die Hauptoptionen: Content, Media. Settings, Developer, Users, Members, Forms.
 Damit einen klaren Unterschied zwischen „Member“ und „User“ gemacht wird, werden die beiden Begriffe erklärt. „User“ ist jemand, der Zugriff zu „Umbraco-Backoffice“ hat und dort hat bestimmte Rechte. 
 
 Ein Member wird von Umbraco für die Registrierung und Authentifizierung eines externen Besuchers benutzt. Das sind Leute, die nur Front-End benutzen dürfen. 
 Man kann auch „Custom Setcion“ erstellen, womit wir uns im weiteren Kapitel beschäftigen. 
 
-Nächste Teil ist Unternavigation oder auch Tree genannt. Alle Unteroptionen stehen da. Jede Hauptfunktion hat ihre eigenen Unteroptionen.
-Es wird zum jeweiligen Setcions zugehörige Funktionalität der Unteroptionen (Trees) durchgehen.
+Nächste Teil ist Unternavigation oder auch Tree genannt. Alle Unteroptionen stehen dort. Jede Hauptfunktion hat ihre eigenen Unteroptionen.
+Zugehörige Funktionalitäten der Unteroptionen (Trees) werden betrachtet.
 
 \begin{itemize}	
-	\item\textbf{Trees vom Content-Section:} In diesem Tree befinden sich alle Seiten, die im Website Front-End er-schienen werden können. Da steht auch Recycle Bin, oder auch Papier-korb genannt. So kann man die gelöschte Seite zurücksetzen. 
-	\item\textbf{Trees von der Media-Section:} Hier können alle Videos und Bilder stehen
-	\item\textbf{Trees vom Settings-Section:}Mithilfe von (PartialView), HTML, CSS, JavaScript, Dokument- und Medientypen, das Erstellen und das Einsetzen von Templates und Spracheinstellungen werden die Webseiten einfach und schnell eingerichtet.
-	\item\textbf{Trees vom Developer-Section:} Hier stehen zur Verfügung Trees, die es den Entwickler ermöglichen bereits erstellte Seiten zu entwickeln. Das wird durch Data Typ, Macros, Packages, Relation Types, XSLT Files und Partial View Macro Files ermöglicht.
-	\item\textbf{Trees vom User:}In diesem Bereich stehen die Benutzer, die mit bestimmtem Rechten vom Umbraco die Front-End der Webseite benutzen dürfen. Zu einem be-stimmten User können verschiedene Rechte abgegeben werden. 
-	\item\textbf{Trees vom Member-Section:} Hier sind Benutzer, die sich in der fertigen Webseite registriert haben.
+	\item\textbf{Trees vom Content-Section:} In diesem Tree befinden sich alle Seiten, die im Website Front-End erschienen werden können. Dort steht auch Recycle Bin, oder auch Papierkorb genannt. So kann man die gelöschte Seite zurücksetzen. 
+	\item\textbf{Trees von der Media-Section:} Hier stehen alle Videos und Bilder zur Verfügung.
+	\item\textbf{Trees vom Settings-Section:} In diesem Tree befindet sich Moglichkeiten CSS, JavaStript, Document Types und zugehörige Templates. PatialView ist auch dort. Es hat eine Übertragungsfunktion von Backend zum Frontend.
+	\item\textbf{Trees vom Developer-Section:} Hier stehen zur Verfügung Trees, die den Entwickler ermöglichen, bereits erstellte Seiten weiter zu entwickeln. Das wird durch Data Typ, Macros, Packages, Relation Types, XSLT Files und Partial View Macro Files ermöglicht.
+	\item\textbf{Trees vom User:}In diesem Bereich stehen die Benutzer, die mit bestimmtem Rechten Umbraco-Backend benutzen dürfen. Zu einem bestimmten User können verschiedene Rechte abgegeben werden. 
+	\item\textbf{Trees vom Member-Section:} Hier sind Benutzer, die Frontend benutzen dürfen.
 	\item\textbf{Trees vom Forms-Section: } Hier kann man leicht verschiedene Arten von Formularen erstellen.		
 \end{itemize}
 
@@ -49,30 +52,54 @@ Im Abbildung \ref{fig:Umbraco Backoffice} kann man sehen, wie Umbraco-Backoffice
 \end{figure}
 
 \pagebreak
-\section{Kundenverwaltung}
-Die Kundenverwaltung fasst den ganzen Bereich um, der sich um die Kunden bezieht. Mehr wird in nächsten Unterkapitel erfahren.
-
-\subsection{Kundenerfassung}
-1. Das angestrebte Ziel ist, dass der Kunde sich registrieren kann. Die Registrierung muss gesichert und individuell sein. Damit die Registrierung zuverlässig ist, muss nach den folgenden Regeln gehalten werden: Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität.
-Ein \ac{PIN} lässt sich in E-Mail des Kunde zusenden. So wird sichergestellt, dass die Kunde eine gültige E-Mail hat. Nach der Registrierung wird überprüft, ob die E-Mail schon existiert. Wenn ja, das Prozess wird storniert und eine Nachricht erscheint, in der geschrieben ist, dass der Kunde diese E-Mail schon verwendet hat. 
-Der Auftragsgeber entscheidet, ob der sich registrierten Kunde bestellen darf    oder nicht. Danach kann der Benutzer sich mit dem PIN und die E-Mail anmelden. 
-Die Kundenverfassung wird durch Member \ac{API} von Umbraco realisiert. 
-Wie schon erläutert wurde, ist Umbraco auf ASP.NET basiert. Damit kann man vom CMS unterschiedliche „Services“ benutzen. Ein davon ist „MemberService“. Das ist direkte Kanal zu dem MemberAPI. Es ist in den „Services property“ von dem „SurfaceController“ zu Verfügung gestellt. 
-Die Registrierung wird via ASP.Net Code und Media API programmatisch erstellt. Das ist eine komplexe Methode, in der es eine vielfältige Datei benötigt wird (SurfaceController, Model, PartialView und Source Datei, wo Front-End Sourcecode steht). Die benötige Information, die wir zu der Registrierung brauchen, wird im „Model“- Datei geschrieben. 
-In der Datei „Model“ stehen „Model Properties“. Das sind Parametern, mit denen man arbeitet. Einfach erklärt, über das Model werden die Properties von „Partial-View“ zu dem „SurfaceController“ übertragen.
-„SurfaceController“ ist der „Autobahn“ zu der Umbraco-Datei. Das ist ein MVC (Model View Controller), das mit dem Umbraco interagiert wird. Es wird von der Bibliothek Umbraco.Web.Mvc.SurfaceController geerbt. 
-Über „PartialView“ werden die Verbindungen zwischen Kontakt Formular und „Model Properties“ geschehen. Das ist eigentlich eine Teilansicht, die von Umbraco Front-End benutzt wird. Dort ist Umbraco User Interface (UI). 
-Folgende Abbildung \ref{fig: neues Konzept: Registrierung} ergibt bessere Verständnis wie die obengenannten Begriffe zu einander stehen.
+\section{Paket A}
+Um der Auftraggeber mehr Flexibilität zu haben, die Frontend-Seite zu editieren, werden "Grids" - Rahmen verwendet. Grid enthält zwölf Spalten. Man kann diese Spalten zusammen binden. So ist Möglich, die Seite auf beliebige Teilen verteilt zu werden, wie im Abbildung \ref{fig:GridsLayout} gezeigt wird.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\paperwidth,angle=90]{Graphics/Registrierung.JPG}
-	\caption[neues Konzept: Registrierung]{Neues Konzept zum Registrieren}
-	\label{fig: neues Konzept: Registrierung}
+	\includegraphics[width=1\linewidth]{Graphics/GridsLayout.png}
+	\caption[GridsLayout]{Übersicht vom Umbraco-Grids}
+	\label{fig:GridsLayout}
 \end{figure}
 
-Diese Möglichkeit vom Umbraco erlaubt uns sich sehr leicht und bequem in dem Server anzumelden.
-In Anhang 6 kann man sich übersichtlicher genau anschauen, was im Back-End passiert ist.
+ Im Grid kann man eigene Einstellungen machen. In dieser Arbeit werden nur zwei Beispielen gezeigt, wie Grids verwendet könnten: Die Farbe und die Größe vom Schrift ändern. "Controls" wie "Rich text editor", "Image", "Quote", "Macro"... Für angefordertes Ziel werden Rich text editor und Macros verwendet. Man kann Macros auch im Rich text editor benutzen. Das wird im späteren Kapitel gemacht. Jetzt erden nur die schon besprochene Beispiele. Sie werden im Stylesheets unter "rte" eingegeben. Im Abbildung \ref{fig:StylingGrind} kann man sehen wie CSS-Befehle im Umbraco geschrieben werden können.
+     
+     \begin{figure}[h]
+     	\centering
+     	\includegraphics[width=0.6\linewidth]{Graphics/StylingGrind.png}
+     	\caption[StylingGrind]{Styling vom Umbraco-Grids}
+     	\label{fig:StylingGrind}
+     \end{figure}
+     
+Über Rich text editor kann man den Text auch editieren, aber nur mit festen Optionen. 
+Diese Stylesheet sind im Richtext edior integrierbar, somit kann Auftraggeber die Schriftart und Farbe ändern. 
+
+\section{Kundenverwaltung}
+Die Kundenverwaltung fasst den ganzen Bereich um, der sich um die Kunden bezieht. Mehr wird es in nächster Unterkapitel erfahren.
+
+\subsection{Kundenerfassung}
+1. Das angestrebte Ziel ist, dass der Kunde sich registrieren kann. Die Registrierung muss gesichert und individuell sein. Damit die Registrierung zuverlässig ist, muss nach den folgenden Regeln gehalten werden: Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität.
+Ein \ac{PIN} lässt sich in E-Mail des Kunde zusenden. So wird sichergestellt, dass die Kunde eine gültige E-Mail hat. Nach der Registrierung wird überprüft, ob die E-Mail schon existiert. Wenn ja, das Prozess wird storniert und eine Nachricht erscheint, in der geschrieben ist, dass der Kunde diese E-Mail schon verwendet. 
+Der Auftraggeber entscheidet, ob der sich registrierten Kunde bestellen darf oder nicht. Danach kann der Benutzer sich mit dem PIN und die E-Mail anmelden. 
+Die Kundenverfassung wird durch Member \ac{API} von Umbraco realisiert. 
+Wie schon erläutert wurde, ist Umbraco auf ASP.NET basiert. Damit kann man vom CMS unterschiedliche „Services“ benutzen. Ein davon ist „MemberService“. Das ist direkte Kanal zu dem MemberAPI. Es ist in den „Services property“ von dem „SurfaceController“ zu Verfügung gestellt. 
+Die Registrierung wird via ASP.Net Code und Media API programmatisch erstellt. Das ist eine komplexe Methode, in der vielfältige Dateien benötigt werden: (SurfaceController, Model, PartialView und Source Datei, in der View-Methoden über eine Aufruf-Funktion aufgerufen wird). Die benötige Information, die wir zu der Registrierung brauchen, wird im „Model“- Datei geschrieben. 
+In der Datei „Model“ stehen „Model Properties“. Das sind Parametern, mit denen man arbeitet. Einfach erklärt, über das Model werden die Properties von „Partial-View“ zu dem „SurfaceController“ oder umgekehrt übertragen.
+„SurfaceController“ ist der „Autobahn“ zu der Umbraco-Datei. Das ist ein \ac{MVC}, das mit dem Umbraco interagiert wird. Es wird von der Bibliothek Umbraco.Web.Mvc.SurfaceController geerbt. 
+Über „PartialView“ werden die Verbindungen zwischen Kontakt Formular und „Model Properties“ geschehen. Das ist eigentlich eine Teilansicht, die von Umbraco Frontend benutzt wird. Dort ist Umbraco \ac{UI}. 
+Folgende Abbildung \ref{fig:Registrierung} ergibt bessere Verständnis wie die obengenannten Begriffe zu einander stehen.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/Registrierung.JPG}
+	\caption[neues Konzept: Registrierung]{Neues Konzept zum Registrieren}
+	\label{fig:Registrierung}
+\end{figure}
+
+Diese Möglichkeit vom Umbraco erlaubt den Benutzer sehr leicht und bequem in dem Server anzumelden oder sich zu registrieren.
+In Anhang - Kundenerfassung kann man sich übersichtlicher genau anschauen, was es genau gemacht wird, damit diese Anforderung erfüllt wird.
+
+\pagebreak
 
 \subsection{Kundeansicht}
 Für Erleichterung des Kunde stehen auf einer Seite alle Möglichkeiten, die der Kunde hat: 
@@ -83,8 +110,86 @@ Für Erleichterung des Kunde stehen auf einer Seite alle Möglichkeiten, die der
 	\item Wichtige Information zu beachten
 	\item Individuelle Information vom Auftraggeber.
 \end{itemize}
-Nach der Registrierung wird der Kunde eine neue Seite sehen. Dort kann er die obengenannten Optionen verwalten. 
-Wenn der Kunde neue Bestellung tätigen will, wird ein neues Fenster geöffnet, in dem er erwünschten Artikeln wählen und bestellen kann. Die gewählten Produkte werden in den Datenbanken gespeichert. Von dort werden sie als vergangene Bestellungen verwendet. Das selben Prinzip steht auch für die Kommunikation zwischen den Auftragsgeber und den Kunden. Wenn eine Nachricht ge-schrieben wird, wird sie in den anderen Datenbanken gespeichert. 
+1. Der Kunde bekommt einen PIN an seinem E-Mail. Die Listings \ref{lst:PINgenerator} und \ref{lst:EmailSchicken} ermöglichen den PIN, obwohl er vom Kunde nicht eingegeben wurde, direkt zur Kundes E-Mail zugechiskt zu werden.
+
+\begin{lstlisting}[caption={JavaScript PIN Generator}, label=lst:PINgenerator]
+function myFunction() {
+document.getElementById('newInput').setAttribute('Value', Math.floor((Math.random() * 9000) + 1000));
+}window.onload = myFunction;
+\end{lstlisting}
+
+
+2. Nach der Registrierung sieht der Kunde eine neue Seite. Dort kann er die obengenannten Optionen verwenden. 
+Wenn der Kunde neue Bestellung tätigen will, wird ein neues Fenster geöffnet, in dem er erwünschten Artikeln wählen und bestellen kann. Die gewählten Produkte werden in den Datenbanken gespeichert. Von dort werden sie als vergangene Bestellungen verwendet. Das selben Prinzip steht auch für die Kommunikation zwischen den Auftraggeber und den Kunden. Wenn eine Nachricht geschrieben wird, wird sie in den anderen Datenbanken gespeichert. 
 Vom Umbraco wird die Information direkt zu den Kunden gesendet. 
-Der Auftragsgeber, so wie der Kunde, können von der Datenbank die Bestellungen und die Nachfragen ansehen.
+Der Auftraggeber, so wie der Kunde, können von der Datenbank die Bestellungen und die Nachfragen ansehen. In den weiteren Kapitel wird detailliert erklärt wie die Kommunikation und die Aufträge funktioniert.
+3. Nach angefordertes Ziel wird den Kunde Profile-Seite über Member abgebildet. Das Bedeutet, dass diese Seite ist nur zum jeweiligen Kunde personalisiert. Die Abbildung wird über memberId geschehen. Es wird ein Filter erstellt, durch das diese Personalisierung erreichen wird. memberId befindet sich im umbraco-Member Datenbank.
+Das, was im Kundenansicht gemacht wurde, ist Verwendung von Macros und Grids. 
+Damit man besser versteht, worum es geht, wird folgenden Abbildung \ref{fig:kundenansichtNew} erstellt. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/kundenansichtNew.png}
+	\caption[Kundeansicht]{Kundeansicht}
+	\label{fig:kundenansichtNew}
+\end{figure}
+Über ein Macros, das man im Listing \ref{lst:macroKundenansicht} anschauen kann, ist es Möglich die Meldungen vom Auftraggeber unter "Wichtige Information"  zu sehen. Im Macro ist eine Methode schrieben, über sie wird die Übertagung vom Member-Section zum Content-Section ermöglicht wird. Abbildung \ref{fig:kundenansichtNew} zeigt, wie der Auftraggeber zu dem Kunde eine Informationsmeldung von Member-Bereich schickt.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/kundenAnsichtWichtInf.png}
+	\caption[Kundeansicht]{Übertragung der Informationsmeldung von Member-Section zu Kundenansicht}
+	\label{fig:kundenAnsichtWichtInf}
+\end{figure}
+\pagebreak
+\begin{lstlisting}[caption={Macro zum Kundenansicht}, label=lst:macroKundenansicht]
+
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+
+@{
+	var memberID = ApplicationContext.Current.Services.MemberService.GetByUsername(Membership.GetUser().UserName);
+	var info = memberID.Comments;
+}
+@info
+\end{lstlisting}
+
+Das Kontaktfenster und allgemein die Bestellungen werden im weiteren Unterkapitel erläutert. Das gesamte Bild wird im Abbildung \ref{fig:KundenansichtNeu} dargestellt.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/KundenansichtNeu.jpg}
+	\caption[Funktionalität von Kundenansicht]{Funktionalität von Kundenansicht}
+	\label{fig:KundenansichtNeu}
+\end{figure}
+
+\subsection{Auftraggeber-Ansicht}
+  
+1. Mithilfe vom Umbraco-Member-Section kann der Auftraggeber seine Kunde filtern. Es gibt eingebaute Einstellungen, wie ListView. Durch diese Möglichkeit ist man kann die Kunden im Member-Bereich filtern, nach dem Name suchen oder löschen. Es kann auch zusätzliche Properties erstellt werden. Diese Properties können über extra Attribut im Model-Datei mit dem Frontend verbunden werden.
+Als Beispiel ist Tab "Datenuebersicht" gegeben. Dort befindet sich nur ein Property "Ort" als Beispiel, aber man kann mehrere einbauen. Abbildung \ref{fig:auftraggeberAnsichtDaten} stellt dieses Tab und zugehöriges Property dar.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/auftraggeberAnsichtDaten.png}
+	\caption[Kundeansicht]{Beispiel zur Erstellung eines extra Tab und Property}
+	\label{fig:auftraggeberAnsichtDaten}
+\end{figure}
+
+Hier wird auch angefordert eine Migration von den alten Kunden Access-Datenbank zu der neuen im Umbraco.
+
+Nach tiefe Recherche wird ein Konzept erstellt. 
+Grundsätzlich stehen im Umbraco Member-Section \cite{OurUmbraco2018} drei Unteroptionen - Members, Member Types und Member Groups.
+Im Member Type wird die Enstellungen (Properties) des Members aufgebaut. Dort wird eine neue Member Type mit extra Properties erstellt. 
+Folgendes Konzept ist basiert auf der Erwartung, dass die Datenbanken von Access auf CSV-Format konvertiert sind.
+Um das vorgegebene Ziel realisiert zu werden, braucht man ein SurficeController erstellen, das die Übertragung leitet. 
+Umbraco verfügt mit spezielle "Autobannen", durch die möglich ist, die Manipulation von festgelegte Sections im Umbraco. Mann nennt diese "Autobannen" - "Services". Sie werden über "ApplicationContext" aufgerufen. In diesem Fall wird "MemberService" genutzt.
+Damit die Datei gelesen wird, wird die Funktion "StreamReader" verwendet. Somit wird die gelesene Datei im eine Variable gespeichert. Von dieser Variable wird mithilfe von der Befehl "split" im eine Array gespeichert. Jeder Teil von dem Array wird über MemberService Befehle und Methoden im Umbraco Members gespeichert. Im Anhang \ref{lst:migrationsController} steht das Quellcode, um man besseres Vorbild zu haben.   
+
+\subsection{Kommunikation}
+\section{Artikelverwaltung}
+\subsection{Erfassen, editieren und löschen}
+\section{Auftragsverwaltung}
+\subsection{Übersicht}
+\subsection{Detailansicht}
+\section{E-Mail Verwaltung}
+\section{Umsatzverwaltung}
+
 

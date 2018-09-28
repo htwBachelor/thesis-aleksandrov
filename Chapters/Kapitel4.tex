@@ -2,36 +2,45 @@
 
 In der durchführenden Analyse werden wir uns mit ein neues Bestell- und Verwaltungssystem Konzept beschäftigen. Auf der Basis der IST-Analyse wird es eine Verbesserung mit aktuellen Webtechnologie und Verfahren durchführen.
 In diesem Kapitel wird man die entstehenden Probleme und Optimierungspotenzial näher anschauen.
+
 Das neue Bestellsystem soll nicht kompliziert sein, sondern Benutzerfreundlich. Die Optionen sollen klar gezeigt werden und einfach zu sein. Sicherheit ist einen wichtigen Teil der guten webbasierte Entwicklung, deswegen werden zusätzliche Prüfungen in dieser Richtung entwickelt.
 Die Auftragsverwaltung und Kundenübersicht werden mit denselben Funktionen bleiben.
 Das ganze Konzept wird aus einer Umbraco-Instanz heraus verwaltet.
-In den folgenden Unterkapitel werden wir uns mit einer detaillieren Erweiterung von oben beschriebenen Anforderungen beschäftigen.
+In den folgenden Unterkapitel wird es mit einer detaillieren Erweiterung von oben beschriebenen Anforderungen erläutert.
 
-\section{Kundenverwaltung}
+\section{Paket A}
+In diesem Unterkapitel wird eine volle Freiheit des Auftraggeber zur Verwendung der Tätigkeiten angefordert. Es wird besonders beachtet, auf der Möglichkeit alles zu editieren und ändern. Als Beispiel ist den Schriftart und die Farbe vorgegeben.
+Es wird die Verwendung vom Grids, Macros und Formulare empfohlen. 
+Diese und weitere Begriffen werden im nächsten Kapitel erläutert.
 
-In diesem Unterkapitel werden wir uns mit den Anforderungen beschäftigen, die Auftragsgeber gewünscht hat, um er die alle Aktivitäten zum Kunde kontrollieren zu können. Eine eigene Seite wird auch erstellt, in der den Kunde seine Bestellungen erstellen und einsehen kann, sowie Nachrichten zuschicken oder lesen kann.
+\section{Paket B}
 
-\subsection{Kundenerfassung}
+
+\subsection{Kundenverwaltung}
+
+In diesem Unterkapitel werden wir uns mit den Anforderungen beschäftigen, die Auftraggeber gewünscht hat, um er die alle Aktivitäten zum Kunde kontrollieren zu können. Eine eigene Seite wird auch erstellt, in der den Kunde seine Bestellungen erstellen und einsehen kann, sowie Nachrichten zuschicken oder lesen kann.
+
+\subsubsection{Kundenerfassung}
 Hier werden wir die Anforderungen zu den Onlinebestell-System und Kunden Übersicht beschreiben.
 \begin{enumerate}
 	\item Der Kunde kann sich bei der Erstbestellung registrieren und bekommt eine PIN zugeschickt. Bei jeder weiteren Bestellung kann er sich mit seiner E-Mail und der PIN einloggen. Das was beachtet werden muss ist, dass beim Bestellen die Mail geprüft werden muss und ein Hinweis ausgegeben werden soll, wenn die Mail schon existiert. Neukunden kommen in der Bestellübersicht vom Auftraggeber in eine gesonderte Übersicht und müssen von ihm bestätigt oder übernommen werden. Erst dann kann sich der Kunde auch einloggen.
 \end{enumerate} 
 
-\subsection{Kundenansicht}
+\subsubsection{Kundenansicht}
 
 \begin{enumerate}
-	\item Der Kunde kann sich bei der Erstbestellung registrieren und bekommt eine PIN zugeschickt. Bei jeder weiteren Bestellung kann er sich mit seiner E-Mail und der PIN einloggen. Das was beachtet werden muss ist, dass beim Bestellen die Mail geprüft werden muss und ein Hinweis ausgegeben werden soll, wenn die Mail schon existiert. Neukunden kommen in der Bestellübersicht vom Auftraggeber in eine gesonderte Übersicht und müssen von ihm bestätigt oder übernommen werden. Erst dann kann sich der Kunde auch einloggen.
+	\item Der Kunde kann sich bei der Erstbestellung registrieren und bekommt eine PIN zugeschickt. Bei jeder weiteren Bestellung kann er sich mit seiner E-Mail und der PIN einloggen. Das was beachtet werden muss ist, dass beim Bestellen die Mail geprüft werden muss und ein Hinweis ausgegeben werden soll, wenn die Mail schon existiert. Neukunden kommen in der Bestellübersicht vom Auftraggeber in einer gesonderte Übersicht und müssen von ihm bestätigt oder übernommen werden. Erst dann kann sich der Kunde auch einloggen.
 	\item Eine flexible Gestaltung für den Auftraggeber muss auch anwesend sein. So kann er hier auch Informationen platzieren, sowohl allgemein als auch kundenspezifisch.
 	\item Die Registrierung muss über die Member in Umbraco abgebildet werden
 \end{enumerate} 
 
-\subsection{Auftragsgeber-Ansicht}
+\subsubsection{Auftraggeber-Ansicht}
 
 \begin{enumerate}
 \item Der Auftraggeber hat eine Kundenübersicht, die er filtern kann. In der Detailansicht sieht er die Infos zum Kunden wie Bestellverlauf und kann von der Ansicht heraus E-Mails an den Kunden senden (Mail-Vorlage oder frei gestaltbar).
 \end{enumerate} 
 
-\subsection{Kommunikation}
+\subsubsection{Kommunikation}
 
 \begin{enumerate}
 	\item Über die Option „neue Nachrichten“ kann der Auftraggeber mit seinen Kunden kommunizieren und Absprachen zu den Aufträgen treffen.
@@ -39,9 +48,9 @@ Hier werden wir die Anforderungen zu den Onlinebestell-System und Kunden Übersi
 \end{enumerate} 
 
 
-\section{Artikelverwaltung}
+\subsection{Artikelverwaltung}
 
-\subsection{Artikel erfassen, ändern und löschen}
+\subsubsection{Artikel erfassen, ändern und löschen}
 
 \begin{enumerate}
 	\item Der Auftraggeber kann in einer recht einfachen Maske Artikel verwalten (online-editor). Es gibt nur zwei Kategorien: Arrangements und Artikel-Standard. Im Moment sind die Arrangements noch nicht mit den Webseiten, die sie beschreiben, gekoppelt.
@@ -50,42 +59,42 @@ Hier werden wir die Anforderungen zu den Onlinebestell-System und Kunden Übersi
 \end{enumerate} 
 
 
-\section{Auftragsverwaltung}
+\subsection{Auftragsverwaltung}
 
-\subsection{Übersicht}
+\subsubsection{Übersicht}
 
 \begin{enumerate}
 	\item Der Auftraggeber hat eine Übersicht über seine aktuellen Aufträge. Für jede Art von Auftrag (neu, bearbeitet, alte und fällig) gibt es ein Select-Befehl.
-	\item Diese Ansicht soll in einer eigenen Umbraco-Section umgesetzt werden. Die Artikeldatenbank soll von Access nach SQL transportiert werden. Es muss eine neue Zuordnung Kunde zu Umbraco-Member geben.
+	\item Diese Ansicht soll in einer eigenen Umbraco-subsection umgesetzt werden. Die Artikeldatenbank soll von Access nach SQL transportiert werden. Es muss eine neue Zuordnung Kunde zu Umbraco-Member geben.
 \end{enumerate} 
 
 
 
-\subsection{Detailansicht}
+\subsubsection{Detailansicht}
 
 \begin{enumerate}
-	\item In der Detailansicht kann der Auftragsgeber den Auftrag bearbeiten, den Status ändern, Positionen editieren / hinzufügen und löschen, dem Kunden Freigaben erteilen (z.B. Aussuchen der Positionen) und eine Rechnungsnummer vergeben.
+	\item In der Detailansicht kann der Auftraggeber den Auftrag bearbeiten, den Status ändern, Positionen editieren / hinzufügen und löschen, dem Kunden Freigaben erteilen (z.B. Aussuchen der Positionen) und eine Rechnungsnummer vergeben.
 	\item Der Auftrag muss ausdruckbar auf vier Seiten ausdruckbar (genau vor-gegeben) sein.
-	\item Die Begrifflichkeiten von zweitem Blatt müssen für Auftragsgeber zu Verfügung gelassen werden, damit er sie selbst ändern kann.
+	\item Die Begrifflichkeiten von zweitem Blatt müssen für Auftraggeber zu Verfügung gelassen werden, damit er sie selbst ändern kann.
 	\item Quick-Icons erleichtern die Kommunikation mit dem Kunden und die Anpassung an dessen Auswahl zu Auftragsbeginn (z.B. Änderung Serviceauswahl).
-	\item Diese Ansicht soll in einer eigenen Umbraco-Section umgesetzt werden.
+	\item Diese Ansicht soll in einer eigenen Umbraco-subsection umgesetzt werden.
 \end{enumerate} 
 
 
-\section{E-Mail-Verwaltung}
+\subsection{E-Mail-Verwaltung}
 
 \begin{enumerate}
 	\item Hier kann der Auftraggeber E-Mail Vorlagen mit Platzhaltern definieren, die er dann in der Kundenkommunikation auswählen kann.
 	\item Es gibt Terminanfragen über die Webseite. Diese erzeugen eine Mail an den Auftraggeber. Der muss in der Mail nur einen Link betätigen, um die Anfrage zu bestätigen. Dies hängt auch mit dem E-Mail Verwaltungssystem zusammen.
-	\item Diese Ansicht soll in einer eigenen Umbraco-Section umgesetzt werden.
+	\item Diese Ansicht soll in einer eigenen Umbraco-subsection umgesetzt werden.
 \end{enumerate} 
 
 
 
-\section{Umsatzverfassung}
+\subsection{Umsatzverfassung}
 \begin{enumerate}
 	\item Hier kann der Auftraggeber die Umsätze der letzten Monate / Jahre sich an-schauen, die über die Aufträge zustande gekommen sind. Dabei ist es wichtig, dass diese Datensätze nicht direkt an die Aufträge gekoppelt sind, sondern aus einer extra Tabelle kommen, die der Auftraggeber auch selbst noch editieren kann.
-	\item Diese Ansicht soll in einer eigenen Umbraco-Section umgesetzt werden.
+	\item Diese Ansicht soll in einer eigenen Umbraco-subsection umgesetzt werden.
 \end{enumerate} 
 
 

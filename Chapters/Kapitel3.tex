@@ -3,6 +3,7 @@ In dieser Arbeit wird das Bestellsystem von der Party-Service-Website "jungekuec
 
 \section{Beschreibung des User Interface (UI) des Bestellsystems} 
 
+\subsection{Anmeldeformular}
 Die Anmeldung und die Registrierung für neue Nutzer befindet sich auf einer gemeinsamen Seite. 
 Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine E-Mail eingeben muss. Neben den Feldern steht ein Hinweis, welcher den Kunden mit den nötigen Informationen versorgt, wie er sich anmelden oder registrieren kann.  
 
@@ -14,6 +15,9 @@ Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine 
 	\label{fig:anmeldeformular}
 \end{figure}
 
+
+\subsection{Registerformular}
+
 Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteht aus fünf Abschnitten. Im ersten muss der Kunde seine persönlichen Daten angeben. In dem zweiten steht die Informationen des Auftrags. Menü Auswahl ist der nächste Abschnitt. Im vorletzten wird die Zubehörauswahl und Serviceauswahl angezeigt. Der letzte Abschnitt ist die Erklärung zu dem Registrierungsprozess. 
 
 \begin{figure}
@@ -23,7 +27,9 @@ Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteh
 	\label{fig:registerForm}
 \end{figure}
 
-Im Fall einer Registrierungsanfrage kann der Auftraggeber sie bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung; Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst betrachtet man die Auftragsverwaltung. Dort befinden sich 11 Optionen, 9 davon leiten zu eigenen Unteroptionen weiter. Die anderen Zwei sind Speichern und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kundedaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen die Nachrichten lesen und löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen.
+\subsection{Auftraggeber - Verwaltung}
+
+Im Fall einer Registeranfrage kann der Auftraggeber sie bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung; Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst betrachtet man die Auftragsverwaltung. Dort befinden sich 11 Optionen, 9 davon leiten zu eigenen Unteroptionen weiter. Die anderen Zwei sind Speichern und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kundedaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen die Nachrichten lesen und löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen.
 
 \begin{figure}[h]
 	\centering
@@ -31,6 +37,8 @@ Im Fall einer Registrierungsanfrage kann der Auftraggeber sie bestätigen oder l
 	\caption[Auftragsverwaltung]{Die bisherige Eingabemaske für die Auftragsverwaltung}
 	\label{fig:Auftragverwaltung}
 \end{figure}
+
+\subsection{Kundenansicht}
 
 Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN pe E-Mail. Mit diesem PIN und seiner E-Mail kann der Kunde sich bei "Jungekueche" anmelden. Nach dem Login-Prozess, findet er sich auf einer persönlichen Nutzerseite wieder. Dort hat er eine Übersicht über seine aktuellen und alten Bestellungen, ein Kontaktfenster, in dem er die Nachrichten einsehen oder schreiben kann, sowie eine Art Newsletter. Außerdem gibt es eine Option, durch die der Kunde neue Bestellungen aufgeben kann.  
 
@@ -163,7 +171,7 @@ JavaScript Funktionen werden benutzt, um die Eingabe zu prüfen, ob alles korrek
 
 Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wird, wird neue Seite geöffnet, in der es vielfältige Möglichkeiten gibt, die Inhalt geändert werden kann. Abbildung \ref{fig: Editor-Menü2}  zeigt uns wie diese Seite aussieht.
 
-\pagebreak
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Graphics/arrangement-Menue-editor.pdf}
@@ -189,7 +197,6 @@ Artikel-Standard“ hat nur eine Möglichkeit, editiert zu werden. Sie wird in d
 \end{figure}
 In Abbildung \ref{fig: Editor-Menü-Funktionalität} ist der Zusammenhang zwischen die verschiedenen Funktionen des „Online-Editor“ zu sehen.
 
-\pagebreak
 
 \section{Testen} 
 
