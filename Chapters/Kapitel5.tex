@@ -165,30 +165,86 @@ Das Kontaktfenster und allgemein die Bestellungen werden im weiteren Unterkapite
 \subsection{Auftraggeber-Ansicht}
   
 1. Mithilfe vom Umbraco-Member-Section kann der Auftraggeber seine Kunde filtern. Es gibt eingebaute Einstellungen, wie ListView. Durch diese Möglichkeit ist man kann die Kunden im Member-Bereich filtern, nach dem Name suchen oder löschen. Es kann auch zusätzliche Properties erstellt werden. Diese Properties können über extra Attribut im Model-Datei mit dem Frontend verbunden werden.
-Als Beispiel ist Tab "Datenuebersicht" gegeben. Dort befindet sich nur ein Property "Ort" als Beispiel, aber man kann mehrere einbauen. Abbildung \ref{fig:auftraggeberAnsichtDaten} stellt dieses Tab und zugehöriges Property dar.
+Hier wurden neuen Tabs und Properties srtellt. Als Beispiele wird Tab-"Datenuebersicht" gegeben. Dort befindet sich nur ein Property "Ort". Im Tab-Membership ist "Password" auch ein Beispiel, aber man kann mehrere einbauen. Abbildung \ref{fig:auftraggeberAnsichtDaten} stellt dieses Tab und zugehöriges Property dar.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{Graphics/auftraggeberAnsichtDaten.png}
 	\caption[Kundeansicht]{Beispiel zur Erstellung eines extra Tab und Property}
 	\label{fig:auftraggeberAnsichtDaten}
 \end{figure}
+ Wie schon erläutert wurde, ist ein Macro erstellt, durch das die Information zum jeweiligen Kunde Zugeordnet ist. 
 
-Hier wird auch angefordert eine Migration von den alten Kunden Access-Datenbank zu der neuen im Umbraco.
-
-Nach tiefe Recherche wird ein Konzept erstellt. 
-Grundsätzlich stehen im Umbraco Member-Section \cite{OurUmbraco2018} drei Unteroptionen - Members, Member Types und Member Groups.
-Im Member Type wird die Enstellungen (Properties) des Members aufgebaut. Dort wird eine neue Member Type mit extra Properties erstellt. 
-Folgendes Konzept ist basiert auf der Erwartung, dass die Datenbanken von Access auf CSV-Format konvertiert sind.
-Um das vorgegebene Ziel realisiert zu werden, braucht man ein SurficeController erstellen, das die Übertragung leitet. 
-Umbraco verfügt mit spezielle "Autobannen", durch die möglich ist, die Manipulation von festgelegte Sections im Umbraco. Mann nennt diese "Autobannen" - "Services". Sie werden über "ApplicationContext" aufgerufen. In diesem Fall wird "MemberService" genutzt.
-Damit die Datei gelesen wird, wird die Funktion "StreamReader" verwendet. Somit wird die gelesene Datei im eine Variable gespeichert. Von dieser Variable wird mithilfe von der Befehl "split" im eine Array gespeichert. Jeder Teil von dem Array wird über MemberService Befehle und Methoden im Umbraco Members gespeichert. Im Anhang \ref{lst:migrationsController} steht das Quellcode, um man besseres Vorbild zu haben.   
-
+Um die Migration problemlos durchgeführt zu werden, muss man eine neue Zuordnung im Member-Bereich realisieren. Die neue Properties müssen zu den alte übertragene Attributen von der Member-Datenbank zustimmen. Mehr dafür wird im Unterkapitel "Übersicht" erläutert.  
 \subsection{Kommunikation}
+
+In diesem Kapitel wird beschrieben, die Kommunikation zwischen dem Auftraggeber und dem Kunde. Als Anforderung wird eine Übersichtliche Kommunikationsmethode mit Filtern (gelesen, nach Kunden suche...) festgestellt.
+
 \section{Artikelverwaltung}
 \subsection{Erfassen, editieren und löschen}
+
+In der vorgegebenen Aufgabe muss den Online-Editor mit zwei Kategorien sein - Arrangements und Artikel-Standard. Diese müssen zu den zugehörigen Webseiten gekoppelt werden. Als Anforderung steht, dass Artikel-Verwaltung einfacher verwaltet werden kann und die Artikelseite der Webseite soll direkt mit dem Artikel gekoppelt sein. In der alten Seite ist die Artikel-Verwaltung nicht mit den zugehörigen Seite gekoppelt. Migration ist nicht angefordert.
+
+Das betrachtete Ziel wird über Macros, PetaPoco-Datenbank und Umbraco vorgegebene Funktionen. Zuerst wird Umraco ListView verwendet, damit die erstellte Artikel sich im Umbraco-Content-Section unter einer gemeinsamen Unteroption befinden. Dazu ist auch vorgegeben, dass den neuen erstellten Artikel direkt editiert werden kann. Abbildung \ref{fig:ArtikelVerwaltung} zeigt übersichtlicher wie die Artikel-Verwaltung aussieht.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Graphics/ArtikelVerwaltung.png}
+	\caption[ArtikelVerwaltung]{Übersicht der Artikel-Verwaltung}
+	\label{fig:ArtikelVerwaltung}
+\end{figure}
+
+Wenn der Artikel "unpublish" ist, kann er nicht im Frontend verwendet wird. Wenn die Artikel schon erstellt sind, wird ein Quellcode im Macros programmiert. Diese Macros werden im schon besprochenen Grids integriert, über die die Inhalt der Artikel zum Frontend übertragen wird. 
+Die Inhalt wird nicht nur mit den Webseiten, sonder auch mit dem Shop-Menü gekoppelt. So wird Selbständigkeit des Auftraggeber verbessert. In der nächsten Abbildung wird gezeigt, wie mit der Erstellung von einem Artikel, werden seinen Daten sowohl im zugehörige Seite, als auch in der Shop-Menü gekoppelt.
+ 
+ hier Abbildung
+Wenn der Kunde registriert ist, kann er die von dem Auftraggeber eingegebene Artikel aus dem Shop wählen. Nach der Bestellung werden die Daten in der Datenbank "Artikel" gespeichert. Gleichzeitig werden diese Daten zusammen mit dem Kunden Daten auch im Datenbank "Auftraege" gespeichert. 
+
+
+
+
 \section{Auftragsverwaltung}
 \subsection{Übersicht}
+
+Das vorgegebene Ziel ist eine Übersicht über die Aufträge und Nachrichten. Diese Ansicht soll in einer eigenen Umbraco-Section umgesetzt werden. Die Artikeldatenbank soll von Access nach SQL transportiert werden. Es muss eine neue Zuordnung zu Umbraco-Member geben.
+
+Das vorgeschlagene Konzept umfasst die Migration von Access Datenbankdatei, Erstellung von neue Custom-Section. 
+
+Um ein neues Section aufgebaut zu werden, braucht man zuerst in einer Klasse-Datei, Methoden von den Bibliotheken "umbraco.buisnesslogic" und "umbraco.interfaces" aufzurufen. Über "Application"-Methode und "IApplication"-Interface. Somit wird die Custom-Section erstellt. Wenn das fertig ist, wird die Übersicht über AngularJS-Controller und HTML erstellt. Diese Dateien werden zu dem API-Controller referenziert. In diesem Controller werden die eigentliche Funktionalitäten von Custom-Section realisiert. Mithilfe dem API-Controller werden die Daten über Model-Attributen von schon erstellter Datenbank "Auftrage" zur Verfügung gestanden, die schon im vorherigen Unterkapitel erwähnt wurde. Die Datenbanken werden über PetaPoco erstellt. Allgemein wird die Erstellung vom Custom-Section in folgender Abbildung dargestellt.
+
+Abbildung
+ 
+Wie es angefordert wurde, soll eine Migration von Access-Datenbank zu Umbraco. Das angestrebte Ziel ist, dass die alten Daten in der neuen zugehörigen Datenbank gespeichert werden. Die neue betrachtete Datenbanken sind Custom-"Artikel" und "Umbraco-Member". 
+Nach tiefer Recherche wird ein Konzept erstellt. 
+Grundsätzlich stehen im Umbraco Member-Section \cite{OurUmbraco2018} drei Unteroptionen - Members, Member Types und Member Groups.
+Im Member Type wird die Einstellungen (Properties) des Members aufgebaut. Dort wird eine neue Member Type mit extra Properties erstellt. 
+Folgendes Konzept ist basiert auf der Erwartung, dass die Datenbanken von Access auf CSV-Format konvertiert sind. Das Bedeutet, dass die Accsess-Datenbankformat Datei auf einer Text-Datei umgewandelt wird. Somit kann man die Methode "StreamReader" nutzen.
+Um das vorgegebene Ziel realisiert zu werden, braucht man ein SurficeController erstellen, das die Übertragung leitet. 
+Umbraco verfügt mit spezielle "Autobannen", durch die möglich ist die Manipulation von festgelegte Sections im Umbraco. Man nennt diese "Autobannen" - "Services". Sie werden über "ApplicationContext" aufgerufen. In diesem Fall wird "MemberService" genutzt.
+Damit die Datei gelesen wird, wird die Funktion "StreamReader" verwendet. Somit wird die gelesene Datei in einer Variablen gespeichert. Von dieser Variablen wird mithilfe von dem Befehl "split" in einem Array gespeichert. Jeder Teil von dem Array wird über MemberService Befehle und Methoden im Umbraco Members gespeichert. Im Anhang \ref{lst:migrationsController} steht das Quellcode, um man besseres Vorbild zu haben.
+Die Abbildung stellt dar, wie dies Prozess durchgeführt wird.
+
+Abbildung 
+
+Wenn die Kundendaten schon übertragen wurden, kann man das selben Prinzip der Migration für die Artikel benutzen. Hier wird als Ziel statt MemberServices - Datenbank "Artikel"-Datenbank  verwendet. Nach der Umwandlung von Access-Datenbankdatei auf CSV-Format, wird diese Datei über die Methode "StreamReader", danach ist die Information im ein Array gespeichert. Über API-Controller werden die Daten im "Artikel"-Datenbank übertragen. In Listing \ref{lst:DBInputArtikel}
+
+\begin{lstlisting}[caption={Datenbank "Artikel" - Transfer}, label=lst:DBInputArtikel]
+
+var setArtikel = new Artikel();
+var db = new PetaPoco.Database("umbracoDbDSN");
+setArtikel.kundeID =_split[0];
+setArtikel.bezeichnung = _split[1];
+setArtikel.beschreibung = _split[2];
+setArtikel.preis = _split[3];
+setArtikel.art = _split[4];
+setArtikel.kannWaehelen = m_split[5];
+
+db.Insert(setArtikel);
+\end{lstlisting}
+
 \subsection{Detailansicht}
+
+
 \section{E-Mail Verwaltung}
 \section{Umsatzverwaltung}
 
