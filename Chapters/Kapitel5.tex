@@ -180,6 +180,8 @@ Um die Migration problemlos durchgeführt zu werden, muss man eine neue Zuordnun
 
 In diesem Kapitel wird beschrieben, die Kommunikation zwischen dem Auftraggeber und dem Kunde. Als Anforderung wird eine Übersichtliche Kommunikationsmethode mit Filtern (gelesen, nach Kunden suche...) festgestellt.
 
+
+
 \section{Artikelverwaltung}
 \subsection{Erfassen, editieren und löschen}
 
@@ -210,11 +212,11 @@ Das vorgegebene Ziel ist eine Übersicht über die Aufträge und Nachrichten. Di
 
 Das vorgeschlagene Konzept umfasst die Migration von Access Datenbankdatei, Erstellung von neue Custom-Section. 
 
-Um ein neues Section aufgebaut zu werden, braucht man zuerst in einer Klasse-Datei, Methoden von den Bibliotheken "umbraco.buisnesslogic" und "umbraco.interfaces" aufzurufen. Über "Application"-Methode und "IApplication"-Interface. Somit wird die Custom-Section erstellt. Wenn das fertig ist, wird die Übersicht über AngularJS-Controller und HTML erstellt. Diese Dateien werden zu dem API-Controller referenziert. In diesem Controller werden die eigentliche Funktionalitäten von Custom-Section realisiert. Mithilfe dem API-Controller werden die Daten über Model-Attributen von schon erstellter Datenbank "Auftrage" zur Verfügung gestanden, die schon im vorherigen Unterkapitel erwähnt wurde. Die Datenbanken werden über PetaPoco erstellt. Allgemein wird die Erstellung vom Custom-Section in folgender Abbildung dargestellt.
+1. Um ein neues Section aufgebaut zu werden, braucht man zuerst in einer Klasse-Datei, Methoden von den Bibliotheken "umbraco.buisnesslogic" und "umbraco.interfaces" aufzurufen. Über "Application"-Methode und "IApplication"-Interface. Somit wird die Custom-Section erstellt. Wenn das fertig ist, wird die Übersicht über AngularJS-Controller und HTML erstellt. Diese Dateien werden zu dem API-Controller referenziert. In diesem Controller werden die eigentliche Funktionalitäten von Custom-Section realisiert. Mithilfe dem API-Controller werden die Daten über Model-Attributen von schon erstellter Datenbank "Auftrage" zur Verfügung gestanden, die schon im vorherigen Unterkapitel erwähnt wurde. Die Datenbanken werden über PetaPoco erstellt. Allgemein wird die Erstellung vom Custom-Section in folgender Abbildung dargestellt.
 
 Abbildung
  
-Wie es angefordert wurde, soll eine Migration von Access-Datenbank zu Umbraco. Das angestrebte Ziel ist, dass die alten Daten in der neuen zugehörigen Datenbank gespeichert werden. Die neue betrachtete Datenbanken sind Custom-"Artikel" und "Umbraco-Member". 
+2. Wie es angefordert wurde, soll eine Migration von Access-Datenbank zu Umbraco. Das angestrebte Ziel ist, dass die alten Daten in der neuen zugehörigen Datenbank gespeichert werden. Die neue betrachtete Datenbanken sind Custom-"Artikel" und "Umbraco-Member". 
 Nach tiefer Recherche wird ein Konzept erstellt. 
 Grundsätzlich stehen im Umbraco Member-Section \cite{OurUmbraco2018} drei Unteroptionen - Members, Member Types und Member Groups.
 Im Member Type wird die Einstellungen (Properties) des Members aufgebaut. Dort wird eine neue Member Type mit extra Properties erstellt. 
@@ -244,6 +246,9 @@ db.Insert(setArtikel);
 
 \subsection{Detailansicht}
 
+Hier wird angefordert, dass der Auftraggeber die Aufträge bearbeiten kann, den Status ändern, Positionen editieren, hinzufügen oder löschen, dem Kunden Freigaben erteilen (zum Beispiel Aussuchen der Positionen) und ein Rechnungsnummer vergeben. Diese Aktivitäten müssen in eigenen Umbraco-Section umbesetzt werden. 
+
+Es wird wie im vorherigen Unterkapitel ein Umbraco-Section aufgebaut. Die verwendeten Datenbanken sind "Auftraege"
 
 \section{E-Mail Verwaltung}
 \section{Umsatzverwaltung}

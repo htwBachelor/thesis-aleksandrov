@@ -5,7 +5,7 @@ In dieser Arbeit wird das Bestellsystem von der Party-Service-Website "jungekuec
 
 \subsection{Anmeldeformular}
 Die Anmeldung und die Registrierung für neue Nutzer befindet sich auf einer gemeinsamen Seite. 
-Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine E-Mail eingeben muss. Neben den Feldern steht ein Hinweis, welcher den Kunden mit den nötigen Informationen versorgt, wie er sich anmelden oder registrieren kann.  
+Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine E-Mail eingeben muss. Neben den Feldern steht ein Hinweis, welcher den Kunden mit den nötigen Informationen versorgt, wie er sich anmelden oder registrieren kann. In der Abbildung \ref{fig:anmeldeformular} wird Anmeldeformular dargestellt 
 
 
 \begin{figure}[h]
@@ -29,7 +29,7 @@ Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteh
 
 \subsection{Auftraggeber - Verwaltung}
 
-Im Fall einer Registeranfrage kann der Auftraggeber sie bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung; Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst betrachtet man die Auftragsverwaltung. Dort befinden sich 11 Optionen, 9 davon leiten zu eigenen Unteroptionen weiter. Die anderen Zwei sind Speichern und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kundedaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen die Nachrichten lesen und löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen.
+Im Fall einer Registeranfrage kann der Auftraggeber sie bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung; Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst betrachtet man die Auftragsverwaltung. Dort befinden sich 11 Optionen, 9 davon leiten zu eigenen Unteroptionen weiter. Die anderen Zwei sind Speichern und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kundedaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen Nachrichten lesen und löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen.
 
 \begin{figure}[h]
 	\centering
@@ -40,7 +40,7 @@ Im Fall einer Registeranfrage kann der Auftraggeber sie bestätigen oder lösche
 
 \subsection{Kundenansicht}
 
-Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN pe E-Mail. Mit diesem PIN und seiner E-Mail kann der Kunde sich bei "Jungekueche" anmelden. Nach dem Login-Prozess, findet er sich auf einer persönlichen Nutzerseite wieder. Dort hat er eine Übersicht über seine aktuellen und alten Bestellungen, ein Kontaktfenster, in dem er die Nachrichten einsehen oder schreiben kann, sowie eine Art Newsletter. Außerdem gibt es eine Option, durch die der Kunde neue Bestellungen aufgeben kann.  
+Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN per E-Mail. Mit diesem PIN und seiner E-Mail kann der Kunde sich bei "Jungekueche" anmelden. Nach dem Login-Prozess, befindet er sich auf einer persönlichen Nutzerseite wieder. Dort hat er eine Übersicht über seine aktuellen und alten Bestellungen, ein Kontaktfenster, in dem er die Nachrichten einsehen oder schreiben kann, sowie eine Art Newsletter. Außerdem gibt es eine Option, durch die der Kunde neue Bestellungen aufgeben kann.  
 
 \begin{figure}[h]
 	\centering
@@ -63,11 +63,11 @@ Nach der grundlegenden Kommunikation zwischen Front- und Backend, wird erläuter
 
 \textbf{Hier wurde noch nicht korrigiert}
 
-Es wird mit dem Bestellseite angefangen, bzw. Anmeldeformular. Wenn die Kunde "Anmeldung" drückt, wird eine HTML Post-Methode aktiviert.  So werden JavaScript- und ASP- Methoden aufgerufen. Die JavaScript-Methoden werden benutzt, damit die Eingabe geprüft wird, ob sie korrekt ist, und ASP-Methoden werden dann aufgerufen. 
+Nach einem Klick auf dem Feld "Bestellformular \& Login" erscheint das Anmeldeformular sowie die Bestellseite. Wenn der Kunde auf dem Button "Anmeldung" klickt, wird eine HTML Post-Methode aktiviert. So werden JavaScript- und Methoden von ASP-Datei aufgerufen. Die JavaScript-Methoden werden benutzt, damit die Eingabe auf Korrektheit geprüft wird. Im Folge werden Methoden von ASP-Datei werden aufgerufen. 
 
-Der Registerformular funktioniert auf demselben Prinzip. Wenn die Eingaben eingegeben sind, werden sie geprüft, ob alles korrekt ist, falls alles in Ordnung ist, werden die Eingaben zu dem zugeordneten Daten, bzw. Methoden zugeschickt.
+Der Registerformular funktioniert auf demselben Prinzip. Nach Eingabe der benötigen Information, werden diese geprüft. Bei einem korrekten Input, werden die Eingaben zu dem zugeordneten Daten, bzw. Methoden zugeschickt.
 
-mehr im Anhang - Funktionen
+weitere Informationen im Anhang - Funktionen
 
 \begin{figure}[h]
 	\centering
@@ -78,7 +78,7 @@ mehr im Anhang - Funktionen
 
 \subsection{Auftraggeber-Verwaltung}
 
-Hier wird man sich nur mit dem Auftragsverwaltung beschäftigen. Die Auftragsverwaltung, wie es schon beschrieben wurde, besteht auf verschiedenen Optionen. Jetzt lässt sich jeweiliges betrachten, wie es funktioniert. 
+Hier wird man mit dem Auftragsverwaltung konfrontiert. Die Auftragsverwaltung, wie es bereits beschrieben wurde, setzt sich aus verschiedenen Optionen zusammen. Die Funktionsweise der jeweiligen Option lässt sich separat betrachten. 
 	
 \subsubsection{Nachricht-Sektion} ermöglicht dem Auftraggeber die Information zu lesen oder löschen. Nach zugeordnetem Wahl wird die Information in der Datenbank "komentar" entweder aufgerufen oder entfernt. 
 
@@ -93,7 +93,7 @@ Hier wird man sich nur mit dem Auftragsverwaltung beschäftigen. Die Auftragsver
 
 \subsubsection{Aufträge: Neue, alte und bearbeitende}
 
-Die Funktionalität von allen drei ist dieselbe. Deswegen es wird allgemein erklärt. Der Auftraggeber kann den Auftrag sehen, editieren oder löschen. Alle von diese Aktivitäten ist mit mehrere Datenbanken verbunden, die verschiedenen Informationen über die gewählten Artikel haben. In den Abbildungen \ref{fig:Autrag_Loeschen} und \ref{fig:auftragEinsehen} betrachtet man die jeweilige Funktionalität.
+Bei allen drei Arten von Aufträge stehen identische Verwaltungsmöglichkeiten zu Verfügung. Der Auftraggeber kann den Auftrag sehen, editieren oder löschen. Jede von diesen Aktivitäten ist mit mehrere Datenbanken verbunden, die verschiedenen Informationen über die gewählten Artikel beinhalten. In den Abbildungen \ref{fig:Autrag_Loeschen} und \ref{fig:auftragEinsehen} betrachtet man die jeweilige Funktionalität.
 
 
 \begin{figure}[h]
@@ -113,7 +113,7 @@ Die Funktionalität von allen drei ist dieselbe. Deswegen es wird allgemein erkl
 \pagebreak
 \subsubsection{Kundendatei}
 
-Hier befindet sich die Information über die Kunden. Da kann man die Information editieren oder löschen. Um der bestimmten Kunde schneller zu finden, steht eine Suchmaschine zur Verfügung. Eine bessere Übersicht wird in der Abbildung \ref{fig:KundenDatei} dargestellt. 
+Hier befindet sich die Information über die Kunden. Man hat die Möglichkeit die Information zu editieren oder zu löschen. Um der bestimmten Kunde schneller zu finden, steht eine Suchmaschine zur Verfügung. Eine bessere Übersicht wird in der Abbildung \ref{fig:KundenDatei} dargestellt. 
 
 \begin{figure}[h]
 	\centering
@@ -122,7 +122,7 @@ Hier befindet sich die Information über die Kunden. Da kann man die Information
 	\label{fig:KundenDatei}
 \end{figure}
 
-Wenn man editieren oder löschen will, wird es über JavaScript Funktion passiert. Diese Funktion ruft die Methoden auf, die sich in der zugeordneten ASP-Datei befindet. Im "Editor-Fenster" kann man die Daten des Kunden editieren, Login-Daten wie Email an Kunden übermitteln, Wichtige Information für alle Kunden senden, V.I.P-Status des Kunden geben, spezifische Warnungen jeweiligem Kunde aufgeben, Information schreiben, sowie Unterschrift editieren und etc. Besser Verständnis zum diesen Fenster ergibt uns Abbildung \ref{fig:Kunden Editor}
+Wenn man editieren oder löschen möchte, geschieht dies über JavaScript Funktion. Diese Funktion ruft die Methoden auf, die sich in der zugeordneten ASP-Datei befindet. Im "Editor-Fenster" kann die Daten des Kunden bearbeitet werden, Login-Daten wie Email an Kunden übermitteln, Wichtige Information für alle Kunden senden, V.I.P-Status des Kunden geben, spezifische Warnungen jeweiligem Kunde aufgeben, Information schreiben, sowie Unterschrift editieren und etc. Besser Verständnis zum diesen Fenster ergibt sich aus Abbildung \ref{fig:KundenEditor}
 
 
 \pagebreak
@@ -132,13 +132,13 @@ Wenn man editieren oder löschen will, wird es über JavaScript Funktion passier
 	\includegraphics[width=0.7\linewidth]{Graphics/kundeEditieren.png}
 	\includegraphics[width=0.7\linewidth]{Graphics/kundeEditieren1.png}
 	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Kunden-Editor}
-	\label{fig:Kunden Editor}
+	\label{fig:KundenEditor}
 \end{figure}
 
 
-Durch JavaScript - Methode wird eine zusätzlichen Möglichkeit zu dem Kunde Nachricht geschrieben. Sie wird aktiviert, wenn der Cursor auf dem bestimmten Kunde, der in der Liste des Adressbuch ist, steht. Die Kommunikation zwischen dem Auftraggeber und dem  Kunde wird auch im Datenbank "komentar" gespeichert. 
+Durch JavaScript - Methode wird eine zusätzlichen Möglichkeit generiert, neue Nachrichten an dem Kunden zu schrieben. Sie wird aktiviert, wenn mit dem Cursor auf dem bestimmten Kunden von der Liste des Adressbuch gefahren wird. Die Kommunikation zwischen dem Auftraggeber und dem Kunde wird auch im Datenbank "komentar" gespeichert. 
 
-Nach allem, was geschrieben ist, soll man sich ein vertieftes Verständnis aufbauen. In folgenden Abbildungen \ref{fig:Kunden Datei Editieren und Löschen} und \ref{fig:Kommunikation Auftraggeber Kunde} kann man sehen, wie genau die Aktivitäten des Auftraggeber passieren und wie funktioniert die Nachricht-Kommunikation.
+Anhand der vorherigen Beschreibungen und der folgenden Abbildungen kann ein vertieftes Verständnis für die Struktur eines Auftrages aufbauen. Von den Abbildungen \ref{fig:Kunden Datei Editieren und Löschen} und \ref{fig:Kommunikation Auftraggeber Kunde} wird ersichtlich, wie die Aktivitäten des Auftraggeber geschehen und wie die Nachricht-Kommunikation abläuft.
 \pagebreak
 
 
@@ -158,18 +158,18 @@ Nach allem, was geschrieben ist, soll man sich ein vertieftes Verständnis aufba
 
 \subsubsection{Online-Editor}
 
-Durch diese Option kann man die neuen Artikel zu erstellt, editieren und löschen werden können.  Es gibt „Artikel – Arragements“ und „Artikel – Standard“. Wenn schon ein Artikel erstellt wurde, kann er entweder gelöscht, editiert oder zugeordnet werden. 
-JavaScript Funktionen werden benutzt, um die Eingabe zu prüfen, ob alles korrekt ist. Wenn alles in Ordnung ist, werden die obengenannten Methoden aus den jeweiligen Dateien aufgerufen. In der folgenden Abbildung \ref{fig: Online-Editor übersicht} ist die Übersicht der Seite zu sehen.
+Durch diese Option können die neuen Artikel erstellt, editieren und löschen werden. Es gibt „Artikel – Arrangements“ und „Artikel – Standard“. Wenn ein Artikel bereits erstellt wurde, kann dieser entweder gelöscht, editiert oder zugeordnet werden. 
+JavaScript Funktionen werden verwendet, um die Eingaben zu prüfen. Wenn die Eingaben treffend ausgefüllt worden sind, werden die obengenannten Methoden aus den jeweiligen Dateien aufgerufen. In der folgenden Abbildung \ref{fig: Online-EditorUebersicht} ist die Übersicht der Seite zu sehen.
 \pagebreak
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Graphics/menue-uebesicht.png}
 	\caption[Kundeansicht]{Die bisherige Eingabemaske für die Übersicht das Menü}
-	\label{fig: Online-Editor übersicht}
+	\label{fig: Online-EditorUebersicht}
 \end{figure}
 
-Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wird, wird neue Seite geöffnet, in der es vielfältige Möglichkeiten gibt, die Inhalt geändert werden kann. Abbildung \ref{fig: Editor-Menü2}  zeigt uns wie diese Seite aussieht.
+Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wird, wird eine neue Seite geöffnet, in der es vielfältige Möglichkeiten gibt, die Inhalte und Daten zu bearbeiten. Von der Abbildung \ref{fig: Editor-Menü2} wird ersichtlich, wie diese Seite aussieht.
 
 
 \begin{figure}[h]
@@ -180,7 +180,7 @@ Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wi
 \end{figure}
 
 
-Artikel-Standard“ hat nur eine Möglichkeit, editiert zu werden. Sie wird in der Abbildung \ref{fig: Editor-Menü-Standard}   dargestellt.
+Artikel-Standard“ hat nur eine Möglichkeit. Sie wird in der Abbildung \ref{fig: Editor-Menü-Standard}   dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -189,13 +189,15 @@ Artikel-Standard“ hat nur eine Möglichkeit, editiert zu werden. Sie wird in d
 	\label{fig: Editor-Menü-Standard}
 \end{figure}
 
+In Abbildung \ref{fig: Editor-Menü-Funktionalität} ist der Zusammenhang zwischen die verschiedenen Funktionen des „Online-Editor“ zu sehen.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{Graphics/OnlineEdior.jpg}
 	\caption[Kundeansicht]{Die bisherige Eingabemaske für die Funktionalität des Menü-Editor-Standard}
 	\label{fig: Editor-Menü-Funktionalität}
 \end{figure}
-In Abbildung \ref{fig: Editor-Menü-Funktionalität} ist der Zusammenhang zwischen die verschiedenen Funktionen des „Online-Editor“ zu sehen.
+
 
 
 \section{Testen} 
