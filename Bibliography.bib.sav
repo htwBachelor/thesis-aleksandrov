@@ -148,4 +148,12 @@
   url    = {https://our.umbraco.com/documentation/Reference/Management/Models/},
 }
 
+@Electronic{UmbracoHQ2018,
+  author = {UmbracoHQ},
+  month  = sep,
+  year   = {2018},
+  title  = {{Services}},
+  url    = {https://our.umbraco.com/documentation/Reference/Management/Services/},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
