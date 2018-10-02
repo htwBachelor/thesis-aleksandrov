@@ -62,7 +62,7 @@ In der Abbildung \ref{fig:Umbraco Backoffice} kann man sehen, wie Umbraco-Backof
 
 \pagebreak
 \section{Paket A}
-Um der Auftraggeber mehr Flexibilität zu haben, die Frontend-Seite zu editieren, werden "Grids" - Rahmen verwendet. Grid enthält zwölf Spalten. Man kann diese Spalten zusammen binden. So ist Möglich, die Seite auf beliebige Teilen verteilt zu werden, wie im Abbildung \ref{fig:GridsLayout} gezeigt wird.
+Um der Auftraggeber mehr Flexibilität zu haben, die Frontend-Seite zu editieren, werden "Grids" - Rahmen verwendet. Grid enthält zwölf Spalten. Man kann diese Spalten zusammen binden. Auf diesem Grund es ist Möglich, die Seite auf beliebige Teilen verteilt zu werden, wie im Abbildung \ref{fig:GridsLayout} gezeigt wird.
 
 \begin{figure}[h]
 	\centering
@@ -71,7 +71,7 @@ Um der Auftraggeber mehr Flexibilität zu haben, die Frontend-Seite zu editieren
 	\label{fig:GridsLayout}
 \end{figure}
 
- Im Grid kann man eigene Einstellungen machen. In dieser Arbeit werden nur zwei Beispielen gezeigt, wie Grids verwendet könnten: Die Farbe und die Größe vom Schrift ändern. "Controls" wie "Rich text editor", "Image", "Quote", "Macro"... Für angefordertes Ziel werden Rich text editor und Macros verwendet. Man kann Macros auch im Rich text editor benutzen. Das wird im späteren Kapitel gemacht. Jetzt erden nur die schon besprochene Beispiele. Sie werden im Stylesheets unter "rte" eingegeben. Im Abbildung \ref{fig:StylingGrind} kann man sehen wie CSS-Befehle im Umbraco geschrieben werden können.
+ Im Grid kann man eigene Einstellungen machen. In dieser Arbeit werden nur zwei Beispielen gezeigt, wie Grids verwendet werden könnten- die Farbe und die Größe vom Schrift ändern. Für angefordertes Ziel werden Rich text editor und Macros verwendet. Man kann Macros auch im Rich text editor implementieren. Das wird im späteren Kapitel gemacht werden. Jetzt werden nur die bereits erwähnte Beispiele betrachtet. Sie werden im Stylesheets unter "rte" eingegeben. Im Abbildung \ref{fig:StylingGrind} kann man sehen wie CSS-Befehle im Umbraco geschrieben werden können.
      
      \begin{figure}[h]
      	\centering
@@ -80,8 +80,8 @@ Um der Auftraggeber mehr Flexibilität zu haben, die Frontend-Seite zu editieren
      	\label{fig:StylingGrind}
      \end{figure}
      
-Über Rich text editor kann man den Text auch editieren, aber nur mit festen Optionen. 
-Diese Stylesheet sind im Richtext edior integrierbar, somit kann Auftraggeber die Schriftart und Farbe ändern. In der Abbildung \ref{fig:schriftManip} ist der Schrift auf rote Farbe und 18pt geändert.
+Über Rich text editor kann man den Inhalt des Frontends ebenfalls editieren werden, aber nur mit festen Optionen. 
+Diese Stylesheet sind im Richtext edior integrierbar, somit kann der Auftraggeber die Schriftart und Farbe ändern. In der Abbildung \ref{fig:schriftManip} ist der Schrift auf rote Farbe und Größe 18pt geändert.
 
  \begin{figure}[h]
 	\centering
@@ -97,11 +97,9 @@ Die Kundenverwaltung fasst den ganzen Bereich um, der sich um die Kunden bezieht
 
 \subsubsection{Kundenerfassung}
 
-1. Das angestrebte Ziel ist, dass der Kunde sich registrieren kann. Die Registrierung muss gesichert und individuell sein. Damit die Registrierung zuverlässig ist, muss nach den folgenden Regeln gehalten werden: Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität.
-Ein \ac{PIN} lässt sich in E-Mail des Kunde zusenden. So wird sichergestellt, dass die Kunde eine gültige E-Mail hat. Nach der Registrierung wird überprüft, ob die E-Mail schon existiert. Wenn ja, das Prozess wird storniert und eine Nachricht erscheint, in der geschrieben ist, dass der Kunde diese E-Mail schon verwendet. 
-Der Auftraggeber entscheidet, ob der sich registrierten Kunde bestellen darf oder nicht. Danach kann der Benutzer sich mit dem PIN und die E-Mail anmelden. 
-Die Kundenverfassung wird durch Member \ac{API} von Umbraco realisiert. 
-Wie schon erläutert wurde, ist Umbraco auf ASP.NET basiert. Damit kann man vom CMS unterschiedliche Services benutzen. Ein davon ist „MemberService“. Das ist direkte Kanal zu dem MemberAPI. Es ist in den Services\cite{UmbracoHQ2018Services} property von dem SurfaceController \cite{UmbracoHQ2018SurfaceController} zu Verfügung gestellt. 
+1. Die vorgegebene Bedingungen für diesen Bereich fassen Registrierung und Anmeldung um. Nach wie vor kann sich der Kunde anhand einer \ac{PIN} und seiner E-Mail Adresse zu dem System anmelden. Diese PIN wird automatisch generiert und  wird nach einer Bestätigung zur E-Mail des Kunden gesendet. Es muss beachtet werden, dass die E-Mail geprüft werden, ob sie sich bereits in dem Register befindet. Es wird dazu angefordert, dass der Auftraggeber den Antrag des Kunden bestätigen kann. Nach der Bestätigung kann der Kunde sich anmelden und dort kann in seiner privaten Seite des Websystems verwalten. Die Funktionalitäten bleichen mit dem alten System gleich.
+Die Kundenverfassung wird durch Member-\ac{API} von Umbraco realisiert. 
+Über „MemberService“ ist MemberAPI erreichbar.Diese Bibliothek ist in den Services\cite{UmbracoHQ2018Services} property von dem SurfaceController \cite{UmbracoHQ2018SurfaceController} zu Verfügung gestellt. 
 Die Registrierung wird via ASP.Net Code und Media API programmatisch erstellt. Das ist eine komplexe Methode, in der vielfältige Dateien benötigt werden: (SurfaceController, Model\cite{UmbracoHQ2018Models}, PartialView und Source Datei, in der View-Methoden über eine Aufruf-Funktion aufgerufen wird). Die benötige Information, die wir zu der Registrierung brauchen, wird im Model- Datei geschrieben. 
 In der Datei Model stehen Model Properties. Das sind Parametern, mit denen man arbeitet. Einfach erklärt, über das Model werden die Properties von Partial-View zu dem SurfaceController oder umgekehrt übertragen.
 SurfaceController ist der „Autobahn“ zu der Umbraco-Datei. Das ist ein \ac{MVC}, das mit dem Umbraco interagiert wird. Es wird von der Bibliothek Umbraco.Web.Mvc.SurfaceController geerbt. 
@@ -117,8 +115,6 @@ Folgende Abbildung \ref{fig:Registrierung} ergibt bessere Verständnis wie die o
 
 Diese Möglichkeit vom Umbraco erlaubt den Benutzer sehr leicht und bequem in dem Server anzumelden oder sich zu registrieren.
 In Anhang - Kundenerfassung kann man sich übersichtlicher genau anschauen, was es genau gemacht wird, damit diese Anforderung erfüllt wird.
-
-\pagebreak
 
 \subsubsection{Kundeansicht}
 Für Erleichterung des Kunde stehen auf einer Seite alle Möglichkeiten, die der Kunde hat: 
@@ -207,9 +203,6 @@ Es wird ContentAPI \cite{UmbracoHQContent2018} verwendet. In Kundenansicht wird 
 	\caption[Nachricht Formular]{Nachricht Formular}
 	\label{fig:NachrichtNEU}
 \end{figure}
-
-\pagebreak
-
 \begin{lstlisting}[caption={NachrichController}, label=lst:NachrichController]
 
 namespace newKonzept.Controllers.NachrichtController
@@ -427,7 +420,6 @@ angular.module("umbraco").controller("Detailansicht.editController", function ($
 });
 \end{lstlisting}
 
-\pagebreak
 \begin{lstlisting}[caption={API-UmbracoAuthorizedJsonController}, label=lst:API-Controller]
 
 namespace newKonzept.Controllers.DB
@@ -475,8 +467,3 @@ namespace newKonzept.Controllers.DB
 \end{lstlisting}
 
 Die Daten von Member-Datenbank werden als String über MemberService aufgerufen und in ein Array gespeichert. Dieses Array wird von der AngularJS aufgerufen und zu HTML-Plugin-Editor zugeschickt. Die Daten des Members können in der Detailansicht nicht geändert werden, deswegen werden sie als String verwendet.
-
-\subsection{E-Mail Verwaltung}
-\subsection{Umsatzverwaltung}
-
-

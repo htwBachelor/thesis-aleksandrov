@@ -93,21 +93,14 @@ Hier wird man mit dem Auftragsverwaltung konfrontiert. Die Auftragsverwaltung, w
 
 \subsubsection{Aufträge: Neue, alte und bearbeitende}
 
-Bei allen drei Arten von Aufträge stehen identische Verwaltungsmöglichkeiten zu Verfügung. Der Auftraggeber kann den Auftrag sehen, editieren oder löschen. Jede von diesen Aktivitäten ist mit mehrere Datenbanken verbunden, die verschiedenen Informationen über die gewählten Artikel beinhalten. In den Abbildungen \ref{fig:Autrag_Loeschen} und \ref{fig:auftragEinsehen} betrachtet man die jeweilige Funktionalität und welche Datenbanken werden zugegriffen. Es spielt keine Rolle welche Art von Auftrag gewählt wird, die Funktionalität umfasst dieselben Datenbanken.
+Bei allen drei Arten von Aufträge stehen identische Verwaltungsmöglichkeiten zu Verfügung. Der Auftraggeber kann den Auftrag sehen, editieren oder löschen. Jede von diesen Aktivitäten ist mit mehrere Datenbanken verbunden, die verschiedenen Informationen über die gewählten Artikel beinhalten. In der Abbildung \ref{fig:Autrag_Loeschen} betrachtet man als Beispiel die Funktionalität 'löschen'. Es spielt keine Rolle welche Art von Auftrag gewählt wird, die Funktionalität umfasst dieselben Datenbanken.
 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Graphics/Autrag_Loeschen.JPG}
+	\includegraphics[width=0.6\linewidth]{Graphics/auftragLoeschen.png}
 	\caption[AutragLoeschen]{Die bisherige Eingabemaske für den Auftrag löschen}
 	\label{fig:Autrag_Loeschen}
-\end{figure}
- 
-\begin{figure}[h] 
-	\centering
-	\includegraphics[width=1\linewidth]{Graphics/AuftragverwaltungEinsehen.png}
-	\caption[auftragEinsehen]{Die bisherige Eingabemaske für den Auftrag lesen}
-	\label{fig:auftragEinsehen}
 \end{figure}
 
 \pagebreak
@@ -137,26 +130,6 @@ Wenn man editieren oder löschen möchte, geschieht dies über JavaScript Funkti
 
 
 Durch JavaScript - Methode wird eine zusätzlichen Möglichkeit generiert, neue Nachrichten an dem Kunden zu schrieben. Sie wird aktiviert, wenn mit dem Cursor auf dem bestimmten Kunden von der Liste des Adressbuch gefahren wird. Die Kommunikation zwischen dem Auftraggeber und dem Kunde wird auch im Datenbank "komentar" gespeichert. 
-
-Anhand der vorherigen Beschreibungen und der folgenden Abbildungen kann ein vertieftes Verständnis für die Struktur eines Auftrages aufbauen. Von den Abbildungen \ref{fig:Kunden Datei Editieren und Löschen} und \ref{fig:Kommunikation Auftraggeber Kunde} wird ersichtlich, wie die Aktivitäten des Auftraggeber geschehen und wie die Nachricht-Kommunikation abläuft und welche Datenbanken werden verwendet. 
-\pagebreak
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Graphics/Kundendatei.JPG}
-	\caption[Kundeansicht]{Die bisherige Eingabemaske für das Editieren/Löschen Funktion}
-	\label{fig:Kunden Datei Editieren und Löschen}
-\end{figure}
-
-Die Kommunikationsverlauf geschieht von Frontend zum Backend über Datenbank. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Graphics/Kommunikation.JPG}
-	\caption[Kundeansicht]{Die bisherige Eingabemaske für die Kommunikation zwischen dem Auftragsgeber und dem Kunde}
-	\label{fig:Kommunikation Auftraggeber Kunde}
-\end{figure}
 
 \subsubsection{Online-Editor}
 
@@ -242,7 +215,7 @@ Cookes sind teilweise gesichert. Hier fehlt es „Secure“-Attribut, sowie „S
  
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Graphics/eergebnisobser.png}
+	\includegraphics[width=0.7\linewidth]{Graphics/eergebnisobser.png}
 	\caption[Egebniss vom HTTP Observatory]{ Ergebnis vom HTTP Observatory }
 	\label{fig: HTTP Observatory: Ergebnis}
 \end{figure}
@@ -253,7 +226,7 @@ Die betrachtenden von uns Webseite verwendet Signaturverfahren SHA-256-With-RSA.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Graphics/obser2.png}
+	\includegraphics[width=0.6\linewidth]{Graphics/obser2.png}
 	\caption[Egebniss TSL Observatory]{Ergebnis vom TLS Observatory}
 	\label{fig: TSL Observatory: Ergebnis}
 \end{figure}
