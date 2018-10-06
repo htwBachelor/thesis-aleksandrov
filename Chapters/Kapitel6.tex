@@ -1,25 +1,15 @@
 \chapter{Schluss}
 \section{Zusammenfassung}
 
-Ziel dieser Arbeit war es, eine veraltete webbasierte Software zu analysieren, welche eine Migration zu ein neuen System durchgeführt werden musste. Hierbei lag der Augenmerk auf der Problemerkennung und -anzeige durch die Analyse und Anforderungen, sowie die Problemlösung.
+Ziel dieser Arbeit war es, eine veraltete webbasierte Software zu analysieren, mit der eine Migration zu einem neuen System durchgeführt werden sollte. Hierbei lag das Augenmerk auf der Problemerkennung und -darstellung anhand der Analyse und der Anforderungen sowie auf der Problemlösung.
+Dazu wurde zunächst die allgemeine Aufgabenstellung definiert und eingegrenzt. Die erstellten Anwendungsfälle haben einen Überblick über die zu bearbeitenden Aufgaben gegeben. Eine IST-Analyse wurde durchgeführt, um in einer Detailansicht jeden Punkt der Software zu betrachten. Danach wurden Werkzeuge angewendet, um eine Bewertung dieser Punkte durchzuführen. Es wurde festgestellt, welche Anforderungsmerkmale für das neue Websystem gelten und welche alten Funktionalitäten beibehalten werden sollten. Als Basis für die neue Software wurde Umbraco CMS ausgewählt. Die neue erstellten Datenbanken mussten an die alten angepasst werden, damit eine reibungslose Migration durchgeführt werden konnte.
 
-Dazu werde zunächst die allgemeine Aufgabenstellung definiert und eingegrenzt. Erststelle wurden die Webtechnologie und Werkzeuge vorgestellt. 
-Eine IST-Analyse wurde durchgeführt, um in einer Detailansicht jedes Punkt der Software betrachtet zu werden. Danach werden Werkzeuge verwenden, um eine Bewertung dieser Punkte zu ergeben.
-Die Anforderungsmerkmale für das neuen Websystem wurden festgestellt, sowie Behalten alter Funktionalitäten. Umbraco CMS wurde als Basis neuer Software entschieden. Neue erstellte Datenbanken mussten zu den alten angepasst werden, damit eine reibungslose Migration durchgeführt werden.
+Im Konzept wurden die allgemeinen Anforderungsmerkmale konkretisiert. Ein Entwurf der fachlichen und technischen Architektur wurde für jeden zugehörigen Teil der vorgegebenen Anforderungen festgelegt, ebenso wie die Implementierung. Die Daten der Kunden wurden erfolgreich in der Member-Section von Umbraco gespeichert, womit der Auftraggeber die Kundendaten editieren oder löschen kann. Auch die Möglichkeit für den Auftraggeber, private Information an die Kunden zu senden, wurde gegeben. Das Konzept zur Migration wurde theoretisch erstellt. Der Prozess erfolgte durch Konvertierung der Datenbankdateien in eine CSV-Datei und anhand des SurfaceController wurden die Dateien in die neue Datenbank übertragen. Weitere Tests der Software und Verbesserungen hinsichtlich der Kommunikation, der Datenbankverbindungen und der Artikelverwaltung sind zu empfehlen. Bei der Bewertung der Implementierung hat sich gezeigt, dass die wichtigsten funktionalen Anforderungen erfüllt sind und sich das System leicht durch zusätzliche Funktionen erweitern lässt.
 
-Im Konzept wurden die allgemeinen Anforderungsmerkmale konkretisiert.
-Ein Entwurf mit fachlicher und technischer Architektur wurde zu jedem zugehörigen Teil der vorgegebenen Anforderungen festgelegt, sowie die Implementierung. 
-Die Daten des Kunden wurden erfolgreich im Member-Section von Umbraco gespeichert. Dort kann der Auftraggeber die Kundendaten editieren oder löschen. Die Möglichkeit, die der Auftraggeber hat, private Information zum Kunde zu senden, wurde eben bestanden.
-Das Konzept zur Migration wurde theoretisch erstellt. Das Prozess wird durch Konvertierung der Datenbankdateien auf CSV-Datei realisiert und anhand SurfaceControllers in der neuen Datenbank übertragen. Es wird empfohlen weitere Testen der Software und Verbesserungen für Kommunikation, Datenbankverbindungen und Artikelverwaltung.  
-Bei der Bewertung der Implementierung wurden hat sich gezeigt, dass ein Großteil der Anforderungen umgesetzt wurde. Es erfüllt die wichtigsten funktionalen Anforderungen und lässt sich leicht durch zusätzliche Funktionen erweitern.
-
-Im Ganzen lässt sich sagen, dass das implementierte Systeme für den geforderten Migration theoretisch zu sehen ist.
 
 \section{Ausblick und Kritik}
 
-Der Funktionsumfang der entwickelten Software bietet dem Auftraggeber eine flexible und unkomplizierte Verwaltungsmöglichkeit. 
+Der Funktionsumfang der entwickelten Software bietet dem Auftraggeber eine flexible und unkomplizierte Verwaltungsmöglichkeit.
+Einige Merkmale, die aus den Anforderungen ermittelt wurden, wie die Verbindung von Datenbank zum Frontend, fehlen teilweise noch. Eine Implementierung dieser Komponenten kann vorgenommen werden, da diese leicht ins Konzept zu integrieren sind. Zu diesen Merkmalen zählen auch die Verbindungen zur noch nicht entwickelten E-Mail- und Umsatzverwaltung. Das Kommunikationskonzept wurde erfolgreich entwickelt, aber aufgrund einer  Erwartung, dass die Kommunikation im Member-Bereich sich befinden musste, wurde das Konzept zurückgewiesen. Aufgrund von fehlenden verbundenen Datenbanken funktionieren die Artikelverwaltung, die Übersicht und die Detailansicht nicht. Eine Erläuterung der E-Mail- und der Umsatzverwaltung konnte aus Zeitgründen nicht erfolgen.
 
-Einige Merkmale, die aus Anforderungen ermittelt wurden, wie die Verbindung von Datenbank zum Frontend, fehlen teilweise noch. Eine Implementierung dieser Komponenten kann vorgenommen werden. da diese leicht ins Konzept zu integrieren sind. Zu diesen Merkmalen zählen neben die Verbindungen von noch nicht entwickelten E-Mail- und Umsatzverwaltung. 
-Die Kommunikationskonzept wurde erfolgreich entwickelt, aber wegen Missverständnis wurde es zurückgewiesen.
-Aufgrund von fehlenden verbundenen Datenbanken funktionieren die Artikelverwaltung, Übersicht und Detailansicht nicht.
-Die Zeit war nicht für E-Mail- und Umsatzverwaltung nicht genug, deswegen sie wurden nicht erläutern. 
+

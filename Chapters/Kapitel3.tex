@@ -1,11 +1,10 @@
 \chapter{IST-Analyse}
-In dieser Arbeit wird das Bestellsystem von der Party-Service-Website "jungekueche" betrachtet. Dazu zählen auch das Verwaltungssystem des Auftraggebers und die Verwaltungsseite des Kunden. Zuerst wird das Userinterface aus der Sicht von allen drei Akteuren beschrieben. Danach wird die Funktion des Systems evaluiert.
+In dieser Arbeit wird das Bestellsystem der Party-Service-Website „jungekueche“ betrachtet. Dazu zählen auch das Verwaltungssystem des Auftraggebers und die Verwaltungsseite des Kunden. Zuerst wird das Userinterface aus der Sicht von allen drei Akteuren beschrieben. Danach wird die Funktion des Systems evaluiert.
 
 \section{Beschreibung des User Interface (UI) des Bestellsystems} 
 
 \subsection{Anmeldeformular}
-Die Anmeldung und die Registrierung für neue Nutzer befindet sich auf einer gemeinsamen Seite. 
-Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine E-Mail eingeben muss. Neben den Feldern steht ein Hinweis, welcher den Kunden mit den nötigen Informationen versorgt, wie er sich anmelden oder registrieren kann. In der Abbildung \ref{fig:anmeldeformular} wird Anmeldeformular dargestellt 
+Die Anmeldung und die Registrierung für neue Nutzer befinden sich auf einer gemeinsamen Seite. Das Anmeldeformular hat zwei Felder, in die der Benutzer seinen PIN und seine E-Mail eingeben muss. Neben den Feldern befindet sich Hinweis, der den Kunden mit den nötigen Informationen versorgt, wie er sich anmelden oder registrieren kann. In der Abbildung \ref{fig:anmeldeformular} ist das Anmeldeformular dargestellt:
 
 
 \begin{figure}[h]
@@ -18,7 +17,7 @@ Das Anmeldeformular hat zwei Felder, in denen der Benutzer seinen PIN und seine 
 
 \subsection{Registerformular}
 
-Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteht aus fünf Abschnitten. Im ersten muss der Kunde seine persönlichen Daten angeben. In dem zweiten steht die Informationen des Auftrags. Menü Auswahl ist der nächste Abschnitt. Im vorletzten wird die Zubehörauswahl und Serviceauswahl angezeigt. Der letzte Abschnitt ist die Erklärung zu dem Registrierungsprozess. 
+Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteht aus fünf Abschnitten. Im ersten muss der Kunde seine persönlichen Daten angeben. Im zweiten steht die Informationen des Auftrags, darauf folgt die Menü-Auswahl und im vorletzten Schritt werden die Zubehör- und die Serviceauswahl angezeigt. Der letzte Abschnitt dient der Erklärung des Registrierungsprozesses. Die Abbildung \ref{fig:registerForm} gibt die Übersicht über Registerformular.
 
 \begin{figure}
 	\centering
@@ -27,9 +26,9 @@ Falls der Kunde keine PIN hat, muss er sich registrieren. Dieses Formular besteh
 	\label{fig:registerForm}
 \end{figure}
 
-\subsection{Auftraggeber - Verwaltung}
+\subsection{Auftraggeber-Verwaltung}
 
-Im Fall einer Registeranfrage kann der Auftraggeber sie bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung; Auftragsverwaltung, E-Mail Verwaltung und Umsatzverwaltung. Zuerst betrachtet man die Auftragsverwaltung. Dort befinden sich 11 Optionen, 9 davon leiten zu eigenen Unteroptionen weiter. Die anderen Zwei sind Speichern und "Abmelden". Durch diese Optionen kann der Auftraggeber die Kundedaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen Nachrichten lesen und löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen.
+Im Fall einer Registeranfrage kann der Auftraggeber diese bestätigen oder löschen. Dem Auftraggeber stehen drei Optionen zur Verfügung: Auftragsverwaltung, E-Mail-Verwaltung und Umsatzverwaltung. Zuerst soll die Auftragsverwaltung betrachtet werden. Dort finden sich elf Optionen, neun davon leiten zu eigenen Unteroptionen weiter. Die anderen beiden sind „Speichern“ und „Abmelden“. Anhand dieser Optionen kann der Auftraggeber die Kundendaten einsehen, editieren, bearbeiten und löschen. Außerdem kann er die dazugehörigen Nachrichten lesen oder löschen. Auch kann er neue und alte Aufträge einsehen und bearbeiten oder löschen. Die Abbildung \ref{fig:Auftragverwaltung} zeigt die Ansicht der Auftraggeber-Verwaltung
 
 \begin{figure}[h]
 	\centering
@@ -40,7 +39,7 @@ Im Fall einer Registeranfrage kann der Auftraggeber sie bestätigen oder lösche
 
 \subsection{Kundenansicht}
 
-Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN per E-Mail. Mit diesem PIN und seiner E-Mail kann der Kunde sich bei "Jungekueche" anmelden. Nach dem Login-Prozess, befindet er sich auf einer persönlichen Nutzerseite wieder. Dort hat er eine Übersicht über seine aktuellen und alten Bestellungen, ein Kontaktfenster, in dem er die Nachrichten einsehen oder schreiben kann, sowie eine Art Newsletter. Außerdem gibt es eine Option, durch die der Kunde neue Bestellungen aufgeben kann.  
+Wenn die Anfrage des Kunden bestätigt wird, erhält der Kunde einen PIN per E-Mail. Mit diesem PIN und seiner E-Mail kann der Kunde sich bei „jungekueche“ anmelden. Nach dem Login-Prozess gelangt er auf eine persönliche Nutzerseite. Dort findet er eine Übersicht über seine aktuellen und bisherigen Bestellungen, ein Kontaktfenster, in dem er Nachrichten einsehen oder schreiben kann, sowie eine Art Newsletter. Außerdem gibt es eine Option, über die der Kunde neue Bestellungen aufgeben kann. Abbildung \ref{fig:KundenAnsicht} veranschaulicht diese Ansicht. 
 
 \begin{figure}[h]
 	\centering
@@ -51,23 +50,22 @@ Wenn die Anfrage des Kunden bestätigt wird, bekommt der Kunde einen PIN per E-M
 
 \section{Beschreibung der Funktionalität}   
 
-Einer Anmeldung muss immer eine Registrierung vorausgehen. Diese Funktionalität wird mit ASP und ASP.NET realisiert. Die verwendeten Hilfsprogramme sind JQuery, JavaScript, AJAX, HTML und CSS. 
+Einer Anmeldung muss immer eine Registrierung vorausgehen. Diese Funktionalität wird mit ASP und ASP.NET realisiert. Die verwendeten Hilfsprogramme sind JQuery, JavaScript, AJAX, HTML und CSS.
+Zuerst wird betrachtet, wie die Kommunikation zwischen den verschiedenen Technologien funktioniert. Das ganze Programm besteht aus Front- und Backend. Das Frontend bezeichnet den Teil des Programms, den der Nutzer verwendet. Im Backend werden die Daten verarbeitet. Die Verbindung zwischen den beiden wird über JavaScript und JQuery realisiert. Wenn der Benutzer eine Tätigkeit ausführt, werden die eingegebenen Daten über JavaScript-Methoden zum Backend weitergeleitet. Dort werden sie verarbeitet und über die JavaScript-Methode aufgerufen. Dort werden sie bearbeitet und wieder zu dem Frontend zugeschickt. Das Backend entsteht aus ASP-Funktionen, in denen sich verschiedene Methoden sowie Datenbanken befinden. In den Datenbanken werden die eingegebenen Daten gespeichert. Ein Beispiel wird in der Abbildung \ref{fig:ASPArchitectur} dargestellt.
 
-Zuerst wird betrachtet, wie die Kommunikation zwischen den verschiedenen Technologien funktioniert. Das ganze Programm besteht aus Front- und Backend. Das Frontend bezeichnet den Teil des Programms, welches der Nutzer verwendet. Im Backend werden die Daten verarbeitet. Die Verbindung zwischen den beiden wird über JavaScript und JQuery realisiert. Wenn der Benutzer eine Tätigkeit ausführt, werden die eingegebenen Daten über JavaScript Methoden zu dem Backend weitergeleitet. Dort werden sie verarbeitet und über JavaScript Methode aufgerufen. Dort werden sie bearbeitet und wieder zu dem Frontend zugeschickt. Das Backend entsteht aus ASP-Funktionen, in denen sich verschiedenen Methoden befinden, sowie Datenbanken. In den Datenbanken werden die eingegebenen Daten gespeichert.
-
-Abbildung (neue Diagramm.. die Kommunikation zwischen Front- und Backend bzw. Client -Server)
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Graphics/ASPArchitectur.png}
+	\caption[ASPArchitectur]{ASP Architektur Model}
+	\label{fig:ASPArchitectur}
+\end{figure}
 
 Nach der grundlegenden Kommunikation zwischen Front- und Backend, wird erläutert wie die einzelnen Kommunikationsabläufe zwischen Front- und Backend koordiniert werden.
 
 \subsection{Anmelde- und Registerformular} 
 
-\textbf{Hier wurde noch nicht korrigiert}
-
-Nach einem Klick auf dem Feld "Bestellformular \& Login" erscheint das Anmeldeformular sowie die Bestellseite. Wenn der Kunde auf dem Button "Anmeldung" klickt, wird eine HTML Post-Methode aktiviert. So werden JavaScript- und Methoden von ASP-Datei aufgerufen. Die JavaScript-Methoden werden benutzt, damit die Eingabe auf Korrektheit geprüft wird. Im Folge werden Methoden von ASP-Datei werden aufgerufen. 
-
-Der Registerformular funktioniert auf demselben Prinzip. Nach Eingabe der benötigen Information, werden diese geprüft. Bei einem korrekten Input, werden die Eingaben zu dem zugeordneten Daten, bzw. Methoden zugeschickt.
-
-weitere Informationen im Anhang - Funktionen
+Nach einem Klick auf das Feld „Bestellformular \& Login“ erscheinen das Anmeldeformular sowie die Bestellseite. Wenn der Kunde auf den Button „Anmeldung“ klickt, wird eine HTML-Post-Methode aktiviert. So werden zunächst JavaScript-Methoden aufgerufen. Diese werden benutzt, um die Eingabe auf Richtigkeit zu prüfen. Danach werden Methoden aus der ASP-Datei aufgerufen.
+Das Registerformular funktioniert nach demselben Prinzip. Nach der Eingabe der benötigen Information werden diese geprüft. Bei einem korrekten Input werden die Eingaben zu den zugeordneten Daten bzw. Methoden geschickt. In der Abbildung \ref{fig:Bestellung} ist eine Übersicht über das Bestellformular zu sehen.
 
 \begin{figure}[h]
 	\centering
@@ -78,23 +76,24 @@ weitere Informationen im Anhang - Funktionen
 
 \subsection{Auftraggeber-Verwaltung}
 
-Hier wird man mit dem Auftragsverwaltung konfrontiert. Die Auftragsverwaltung, wie es bereits beschrieben wurde, setzt sich aus verschiedenen Optionen zusammen. Die Funktionsweise der jeweiligen Option lässt sich separat betrachten. 
+Die Auftragsverwaltung setzt sich, wie bereits beschrieben wurde, aus verschiedenen Optionen zusammen. Die Funktionsweise der jeweiligen Option soll im Folgenden separat betrachtet werden.
 	
-\subsubsection{Nachricht-Sektion} ermöglicht dem Auftraggeber die Information zu lesen oder löschen. Nach zugeordnetem Wahl wird die Information in der Datenbank "komentar" entweder aufgerufen oder entfernt. 
+\subsubsection{Nachricht-Sektion} 
+
+Sie ermöglicht dem Auftraggeber, die Information zu lesen oder zu löschen. Nach der zugeordneten Wahl wird die Information in der Datenbank „komentar“ entweder aufgerufen oder entfernt. In der Abbildung \ref{fig:lesenLoeschen} ist diese Aktivitäten zu sehen.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Graphics/NeueNachricht.JPG}
 	\caption[Kommunikation]{Die bisherige Eingabemaske für den Nachrichten lesen oder löschen}
-	\label{fig:Kommunikation}
+	\label{fig:lesenLoeschen}
 \end{figure}
 
 
 
 \subsubsection{Aufträge: Neue, alte und bearbeitende}
 
-Bei allen drei Arten von Aufträge stehen identische Verwaltungsmöglichkeiten zu Verfügung. Der Auftraggeber kann den Auftrag sehen, editieren oder löschen. Jede von diesen Aktivitäten ist mit mehrere Datenbanken verbunden, die verschiedenen Informationen über die gewählten Artikel beinhalten. In der Abbildung \ref{fig:Autrag_Loeschen} betrachtet man als Beispiel die Funktionalität 'löschen'. Es spielt keine Rolle welche Art von Auftrag gewählt wird, die Funktionalität umfasst dieselben Datenbanken.
-
+Bei allen drei Arten von Aufträgen stehen identische Verwaltungsmöglichkeiten zur Verfügung. Der Auftraggeber kann den Auftrag sehen, editieren oder löschen. Jede dieser Aktivitäten ist mit mehreren Datenbanken verbunden, die verschiedene Informationen über die gewählten Artikel beinhalten. In der Abbildung \ref{fig:Autrag_Loeschen} wird zum Beispiel die Funktionalität ’löschen’ gezeigt. Es spielt keine Rolle, welche Art von Auftrag gewählt wird, denn die Funktionalität umfasst dieselben Datenbanken.
 
 \begin{figure}[h]
 	\centering
@@ -106,7 +105,7 @@ Bei allen drei Arten von Aufträge stehen identische Verwaltungsmöglichkeiten z
 \pagebreak
 \subsubsection{Kundendatei}
 
-Hier befindet sich die Information über die Kunden. Man hat die Möglichkeit die Information zu editieren oder zu löschen. Um der bestimmten Kunde schneller zu finden, steht eine Suchmaschine zur Verfügung. Eine bessere Übersicht wird in der Abbildung \ref{fig:KundenDatei} dargestellt. 
+Hier befinden sich die Information über die Kunden. Es gibt die Möglichkeit, die Information zu editieren oder zu löschen. Um einen bestimmten Kunden schneller zu finden, steht eine Suchmaschine zur Verfügung. Eine Übersicht wird in der Abbildung \ref{fig:KundenDatei} dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -115,8 +114,7 @@ Hier befindet sich die Information über die Kunden. Man hat die Möglichkeit di
 	\label{fig:KundenDatei}
 \end{figure}
 
-Wenn man editieren oder löschen möchte, geschieht dies über JavaScript Funktion. Diese Funktion ruft die Methoden auf, die sich in der zugeordneten ASP-Datei befindet. Im "Editor-Fenster" kann die Daten des Kunden bearbeitet werden, Login-Daten wie Email an Kunden übermitteln, Wichtige Information für alle Kunden senden, V.I.P-Status des Kunden geben, spezifische Warnungen jeweiligem Kunde aufgeben, Information schreiben, sowie Unterschrift editieren und etc. Besser Verständnis zum diesen Fenster ergibt sich aus Abbildung \ref{fig:KundenEditor}
-
+Wenn man editieren oder löschen möchte, geschieht dies über die JavaScript-Funktion. Diese Funktion ruft die Methoden auf, die sich in der zugeordneten ASP-Datei befinden. Im „Editor-Fenster“ lassen sich die Daten des Kunden bearbeiten, Login-Daten wie E-Mails an Kunden übermitteln, wichtige Information für alle Kunden senden, es kann dem Kunden ein V.I.P-Status gegeben, es können spezifische Warnungen an den jeweiligen Kunden gegeben, Informationen geschrieben sowie Unterschriften editiert werden etc. Das Fenster wird in Abbildung \ref{fig:KundenEditor} gezeigt.
 
 \pagebreak
 
@@ -128,13 +126,12 @@ Wenn man editieren oder löschen möchte, geschieht dies über JavaScript Funkti
 	\label{fig:KundenEditor}
 \end{figure}
 
-
-Durch JavaScript - Methode wird eine zusätzlichen Möglichkeit generiert, neue Nachrichten an dem Kunden zu schrieben. Sie wird aktiviert, wenn mit dem Cursor auf dem bestimmten Kunden von der Liste des Adressbuch gefahren wird. Die Kommunikation zwischen dem Auftraggeber und dem Kunde wird auch im Datenbank "komentar" gespeichert. 
+Durch JavaScript-Methoden wird eine zusätzliche Möglichkeit generiert, neue Nach-richten an dem Kunden zu schreiben. Sie wird aktiviert, wenn in der Liste des Adressbuchs mit dem Cursor über den Namen eines bestimmten Kunden gefahren wird. Die Kommunikation zwischen dem Auftraggeber und dem Kunden wird auch in der Datenbank „komentar“ gespeichert.
 
 \subsubsection{Online-Editor}
 
-Durch diese Option können die neuen Artikel erstellt, editieren und löschen werden. Es gibt „Artikel – Arrangements“ und „Artikel – Standard“. Wenn ein Artikel bereits erstellt wurde, kann dieser entweder gelöscht, editiert oder zugeordnet werden. 
-JavaScript Funktionen werden verwendet, um die Eingaben zu prüfen. Wenn die Eingaben treffend ausgefüllt worden sind, werden die obengenannten Methoden aus den jeweiligen Dateien aufgerufen. In der folgenden Abbildung \ref{fig: Online-EditorUebersicht} ist die Übersicht der Seite zu sehen.
+Mit dieser Option können neue Artikel erstellt, editiert und gelöscht werden. Es gibt „Artikel-Arrangements“ und „Artikel-Standard“. Bereits erstellte Artikel können entweder gelöscht, editiert oder zugeordnet werden. JavaScript-Funktionen werden verwendet, um die Eingaben zu prüfen. Wenn die Eingaben korrekt ausgefüllt worden sind, werden die obengenannten Methoden aus den jeweiligen Dateien aufgerufen. In der folgenden Abbildung \ref{fig: Online-EditorUebersicht} ist eine Übersicht über die Seite zu sehen.
+
 \pagebreak
 
 \begin{figure}[h]
@@ -144,8 +141,8 @@ JavaScript Funktionen werden verwendet, um die Eingaben zu prüfen. Wenn die Ein
 	\label{fig: Online-EditorUebersicht}
 \end{figure}
 
-Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wird, wird eine neue Seite geöffnet, in der es vielfältige Möglichkeiten gibt, die Inhalte und Daten zu bearbeiten. Von der Abbildung \ref{fig: Editor-Menü2} wird ersichtlich, wie diese Seite aussieht.
-
+Wenn die Option „Editieren“ zu den „Artikel-Arrangements“ ausgewählt wird, wird eine neue Seite geöffnet, in der es verschiedene Möglichkeiten gibt, die Inhalte und Daten zu bearbeiten. Abbildung \ref{fig: Editor-Menü2} zeigt diese Seite.
+Bei „Artikel-Standard“ gibt es nur eine Möglichkeit. Sie wird in der Abbildung \ref{fig: Editor-Menü-Standard} dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -153,9 +150,6 @@ Wenn die Option „Editieren“ zu dem „Artikel-Arrangements“ ausgewählt wi
 		\caption[Kun2deansicht]{Die bisherige Eingabemaske für die Übersicht des Menü-Editor-Arrangements}
 	\label{fig: Editor-Menü2}
 \end{figure}
-
-
-Artikel-Standard“ hat nur eine Möglichkeit. Sie wird in der Abbildung \ref{fig: Editor-Menü-Standard}   dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -165,12 +159,9 @@ Artikel-Standard“ hat nur eine Möglichkeit. Sie wird in der Abbildung \ref{fi
 \end{figure}
 
 
-
-
 \section{Testen} 
 
-
-Für diese Arbeit wird ein webbasierten Sicherheit-Checker von 1\&1. Nach eine vertiefte Recherche, zeigte sich, dass die Webseite auf eine mittlere Sicherheitsposition steht. Die Webseite ist nach vier Kriterien ohne Beanstandung abgesichert.
+Für diese Arbeit wird ein webbasierter Sicherheit-Checker von 1\&1 verwendet. Eine grundlegende Recherche hat gezeigt, dass die Webseite auf einer mittleren Sicherheitsstufe steht. Die Webseite ist nach vier Kriterien ohne Beanstandung abgesichert.
 
 \begin{itemize}	
 	
@@ -180,38 +171,33 @@ Für diese Arbeit wird ein webbasierten Sicherheit-Checker von 1\&1. Nach eine v
 
 \item Apache-Status ist verboten. Die Status-Seite ist öffentlich nicht erreichbar. So wird den Schutz von potenziellen Angreifern erhöht. 
 
-\item Server Version ist nicht sichtbar. Die Server Version ist öffentlich nicht einsehbar. Damit kann ein Angreifer nicht einfach bekannte Schwachstellen ausnutzen.
+\item Die Server Version ist öffentlich nicht einsehbar. Damit kann ein Angreifer nicht einfach bekannte Schwachstellen ausnutzen.
 \end{itemize}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{Graphics/egebnis1to1.png}
 	\caption[Egebniss Von 1zu1]{Ergebnis vom 1zu1}
-	\label{fig: Egebniss Von 1zu1}
+	\label{fig: ErgebnissVonEinZuEin}
 \end{figure}
 
-Wie man von der Abbildung \ref{fig: Editor-Menü-Funktionalität} sehen kann, ist die Webseite gesichert, aber es gibt einige Bereiche, die eine Optimierung benötigen würde. Sie lädt sich langsam, wird im Browser relativ oft gefunden, aber ist sie gesichert. 
-
-Über noch ein Web-Checker werden die witere Funktionalitäten der Wrbseite analysiert. Observatory\cite[postnote]{bentley:1999} von Mozilla analysiert der Browser im vier Schritten. 
+Wie die Abbildung \ref{fig: ErgebnissVonEinZuEin} zeigt, ist die Webseite gesichert, aber es gibt einige Bereiche, die eine Optimierung benötigen würden. Die Seite lädt langsam, wird im Browser relativ oft gefunden, aber ist sie gesichert.
+Über einen anderen Web-Checker werden weitere Funktionalitäten der Webseite analysiert. Observatory \cite{King2018} von Mozilla analysiert den Browser im vier Schritten.
 
 \begin{itemize}	
 	\item \ac{HTTP}
 	\item \ac{TLS}
 	\item \ac{SSH}
-	\item \ac{Third-Party Tests}
+	\item Third-Party Tests
 \end{itemize}
 
-Erste zwei werden betrachtet, weil nur sie wichtig zu dieser Arbeit sind.
+Hier werden nur die ersten beiden Schritte betrachtet, da nur sie für diese Arbeit relevant sind.
 
 \pagebreak
 
 \textbf{HTTP Observatory}
 
-Hier werden aktuelle Sicherheit der Webseite im öffentlichen Internet beobachtet. Alle Anfragen sind über POST- oder GET-Methoden durchgeführt und die Rückmeldungen sind im JSON-Format.
-Nach dieser Analyse wird gezeigt, dass \ac{CPS} nicht implementiert wurde. CSP verhindert Weitbereich von \ac{XSS}- und „clickjacking“- Attacken. 
-Cookes sind teilweise gesichert. Hier fehlt es „Secure“-Attribut, sowie „SameSite“ und „Prefix“.  Durch „Secure“ werden die Cookies davon abgehalten, dass sie über nicht gesicherten HTTP versendet werden. „SameSite“ hält die Cookies vom \ac{CSRF} Attacken und Cross-Site-Übersendung ab, d. h. es ist möglich, dass es einen Hacker-Angriff auf Computersystem des Benutzers durchgeführt werden \cite[postnote]{bentley:1999}
-. Es wird keine \_Host- und \_Secure-Prefixes auf den Namen der Cookies verwendet. Das bedeutet, dass sie nicht gegen Überschreiben geschützt sind. Man kann in der Abbildung \ref{fig: HTTP Observatory: Ergebnis} die genaue Bewertung von der Webseite.
- stellt das Resultat von der durchgeführten Analyse dar.
+Hier wird die aktuelle Sicherheit der Webseite im öffentlichen Internet betrachtet. Alle Anfragen werden über POST- oder GET-Methoden durchgeführt und die Rückmeldungen erfolgen im JSON-Format. In dieser Analyse wird gezeigt, dass \ac{CSP}nicht implementiert wurde. CSP verhindert Weitbereich von \ac{XSS}- und „clickjacking“-Attacken. Cookes sind teilweise gesichert. Hier fehlen das „Secure“-Attribut sowie „SameSite“ und „Prefix“. Durch „Secure“ werden die Cookies davon abgehalten, dass sie über nicht gesichertes HTTP versendet werden. „SameSite“ hält die Cookies von \ac{CSRF}-Attacken und Cross-Site-Übersendung ab, d. h. es ist nicht auszuschließen, dass ein Hacker-Angriff auf das Computersystem des Benutzers erfolgt. Es werden keine \_Host- und \_Secure-Prefixe auf den Namen der Cookies verwendet. Das bedeutet, dass sie nicht gegen Überschreiben geschützt sind. Die Abbildung \ref{fig: HTTP Observatory: Ergebnis} zeigt die genaue Bewertung der Webseite mit dem Resultat der durchgeführten Analyse.
  
 \begin{figure}[h]
 	\centering
@@ -222,7 +208,9 @@ Cookes sind teilweise gesichert. Hier fehlt es „Secure“-Attribut, sowie „S
 
 \textbf{TLS}
 
-Die betrachtenden von uns Webseite verwendet Signaturverfahren SHA-256-With-RSA. Das bedeutet, dass eine Kombination zwischen SHA256 (kryptologi-schen Hashfunktion, die Hashwerte mit einer Länge zwischen 256 und 512 Bits erzeugt) und \ac{RSA} (ermöglicht symmetrische Schlüssel jeder üblichen Länge verschlüsselt zu werden). In der Abbildung \ref{fig: TSL Observatory: Ergebnis} stellt dar
+Die hier betrachtete Webseite verwendet das Signaturverfahren SHA-256-With-RSA. Das bedeutet, dass eine Kombination zwischen SHA256 (kryptologische Hashfunktion,
+
+die Hashwerte mit einer Länge zwischen 256 und 512 Bits erzeugt) und \ac{RSA} (dadurch können symmetrische Schlüssel jeder üblichen Länge erzeugt werden) vorliegt (siehe Abbildung \ref{fig: TSL Observatory: Ergebnis}).
 
 \begin{figure}[h]
 	\centering
@@ -233,11 +221,7 @@ Die betrachtenden von uns Webseite verwendet Signaturverfahren SHA-256-With-RSA.
 
 \section{Warum ist eine Migration notwendig?}
 
-ASP ist eine nicht Objekt-Orientierte Skripte Sprache. Es ist anfällig zu Unter-brechung der Applikationen, z. B. wenn \ac{IIS} gestoppt und neu gestartet wird. Wenn eine ASP-Seite aufgerufen wird, wird den Text linear analysiert.
-Die Frontend Verwendung des Bestellsystems ist verschachtelt und es gibt redundanten Optionen. Auf einer Seite befindet sich Login- und Registrierung Menü, sowie das Bestellformular. Das verlangsamt die Eröffnung der Seite. 
-Es gibt unnötige Quellcode, das entfernt werden kann. Ein anderer Nachteil des Systems ist, dass es nicht dynamisch orientiert ist, d.h. die Umgebung ist nicht Benutzerfreundlich. Der Auftragsgeber muss sich für jede nötige Änderung bei dem Entwickler melden. Das macht den Benutzer abhängig von dem Hersteller des Programms.
-Heutzutage gibt es vielfältige Auswahl von CMS, durch das der Auftragsgeber mit verbreiteten Möglichkeiten zu Änderun-gen seiner Website verfügt. 
-Im folgenden Kapitel wird einer diesen CMS erläutert.
+ASP ist eine nicht Objekt-Orientierte Skripte Sprache. Es ist anfällig zu Unterbrechung der Applikationen, z. B. wenn die \ac{IIS} gestoppt und neu gestartet werden. Wenn eine ASP-Seite aufgerufen wird, wird der Text linear analysiert. Die Frontend-Verwendung des Bestellsystems ist verschachtelt und es gibt redundante Optionen. Das Login- und Registrierungs-Menü sowie das Bestellformular befinden sich auf einer Seite. Dadurch wird das Öffnen der Seite verlangsamt. Es gibt unnötigen Quellcode, der entfernt werden kann. Ein anderer Nachteil des Systems ist, dass es nicht dynamisch orientiert ist, d. h. die Umgebung ist nicht benutzerfreundlich. Der Auftraggeber muss für jede nötige Änderung den Entwickler kontaktieren. Dadurch ist der Benutzer vom Hersteller des Programms abhängig. Aktuell gibt es eine große Auswahl an CMS, durch die dem Auftragsgeber zahlreiche Möglichkeiten für Änderungen seiner Website zur Verfügung stehen. Im folgenden Kapitel wird eines dieser CMS erläutert.
 
 
 
